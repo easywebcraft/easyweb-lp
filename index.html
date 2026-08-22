@@ -219,11 +219,19 @@ section{scroll-margin-top:64px}
 .plan .p .u{font-size:13px; color:var(--muted)}
 .plan .taxin{color:var(--muted); font-size:12px; margin-top:6px}
 .opts{margin-top:20px; display:grid; gap:10px}
-.opt{display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--card); border:1px solid var(--line); border-radius:999px; padding:13px 22px; box-shadow:var(--shadow)}
+/* 金額は税込の注記まで入れると長く、スマホ幅では項目名と横に並べきれない
+   （390pxで数pxはみ出していた）。狭いうちは縦に積み、幅が取れてから左右に振り分ける。
+   min-width:0 が無いと、長い説明文が flex の縮み下限に効いて縮まない。 */
+.opt{display:flex; flex-direction:column; align-items:flex-start; gap:6px; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:14px 20px; box-shadow:var(--shadow)}
+.opt > div:first-child{min-width:0}
 .opt .on{font-weight:900; font-size:15px; color:var(--navy)}
 .opt .oc{color:var(--muted); font-size:12px}
-.opt .op{font-weight:900; color:var(--navy); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; font-size:15px}
+.opt .op{font-weight:900; color:var(--navy); font-variant-numeric:tabular-nums; text-align:left; font-size:15px}
 .opt .op small{color:var(--muted); font-weight:700; font-size:11px}
+@media(min-width:480px){
+  .opt{flex-direction:row; justify-content:space-between; align-items:center; gap:12px; border-radius:999px; padding:13px 22px}
+  .opt .op{white-space:nowrap; text-align:right}
+}
 .tax-note{color:var(--muted); font-size:12px; text-align:center; margin-top:14px}
 
 /* 月額に含まれるもの */
