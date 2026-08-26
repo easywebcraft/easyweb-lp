@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>OGP画像の生成元（1200x630）</title>
+<!--
+  このファイルは ogp.png（SNS共有時のプレビュー画像）の生成元です。
+  価格を変えたら、このファイルの金額を書き換えて 1200x630 で書き出し、
+  ルートの ogp.png を差し替えてください。
+  書き出し例:
+    node tools/render-ogp.js
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=block">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden;background:#081c3f}
+  .canvas{
+    position:relative;width:1200px;height:630px;overflow:hidden;
+    font-family:"Noto Sans JP",sans-serif;
+    background:
+      radial-gradient(120% 90% at 4% 108%, rgba(150,192,238,.20) 0%, rgba(150,192,238,.09) 38%, rgba(150,192,238,0) 62%),
+      linear-gradient(135deg, #081c3f 0%, #0b2b5e 50%, #0d3a7d 100%);
+  }
+  .canvas > *{position:absolute}
+
+  /* ---- 左：テキスト ---- */
+  .logo{
+    left:85px; top:102px; font-size:42.5px; font-weight:800; line-height:1;
+    color:#fff; letter-spacing:-.005em; white-space:nowrap;
+  }
+  .logo .y{color:#ffc61a}
+
+  .sub{
+    left:84px; top:167px; font-size:21px; font-weight:500; line-height:1;
+    color:#b9c9e4; white-space:nowrap;
+  }
+
+  .l1{
+    left:88px; top:260px; font-size:75px; font-weight:900; line-height:1;
+    color:#fff; letter-spacing:.005em; white-space:nowrap;
+    transform:scaleY(.94); transform-origin:left top;
+  }
+  .l1 .y{color:#ffc61a}
+
+  .l2{
+    left:89px; top:359px; font-size:75px; font-weight:900; line-height:1;
+    color:#fff; letter-spacing:.005em; white-space:nowrap;
+    transform:scaleY(.94); transform-origin:left top;
+  }
+  .l2 .y{color:#ffc61a}
+  .l2 .tax{
+    font-size:27px; font-weight:700; color:#b9c9e4;
+    letter-spacing:0; margin-left:4px; vertical-align:baseline;
+  }
+
+  .bar{left:84px; top:487px; width:10px; height:32px; border-radius:2px; background:#ffc61a}
+  .foot{
+    left:110px; top:487px; font-size:22.4px; font-weight:700; line-height:1.28; letter-spacing:.021em;
+    color:#eef2f7; white-space:nowrap;
+  }
+  .foot .sep{color:#7f96b8; margin:0 8px}
+
+  /* ---- 右：ブラウザ風カード ---- */
+  .card{
+    left:790px; top:150px; width:330px; height:330px;
+    background:#fff; border-radius:16px; overflow:hidden;
+    box-shadow:0 18px 46px rgba(3,14,35,.34);
+  }
+  .card .head{position:absolute;left:0;top:0;width:330px;height:44px;background:#e9eef5}
+  .dot{position:absolute;top:19px;width:12px;height:12px;border-radius:50%}
+  .dot.r{left:20px;background:#f57f71}
+  .dot.y{left:41px;background:#f5bf4f}
+  .dot.g{left:62px;background:#5fc454}
+
+  .card i{position:absolute;display:block}
+  .navybar{left:24px;top:70px;width:180px;height:22px;border-radius:4px;background:#0d3a7d}
+  .ln1{left:24px;top:104px;width:282px;height:12px;border-radius:6px;background:#dde6f0}
+  .ln2{left:24px;top:126px;width:240px;height:12px;border-radius:6px;background:#dde6f0}
+  .bx1{left:24px;top:162px;width:130px;height:90px;border-radius:8px;background:#eef4fb}
+  .bx2{left:176px;top:162px;width:130px;height:90px;border-radius:8px;background:#eef4fb}
+  .btn{left:24px;top:276px;width:150px;height:34px;border-radius:8px;background:#ffc61a}
+  .btn em{position:absolute;left:37px;top:15px;width:77px;height:5px;border-radius:3px;background:#3a2e00}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="logo">EasyWeb<span class="y">Craft</span></div>
+  <div class="sub">すぐはじめたい人のための サブスク型ホームページ制作</div>
+
+  <div class="l1">初期費用<span class="y">0円</span></div>
+  <div class="l2">月額<span class="y">5,980円</span>〜<span class="tax">（税別）</span></div>
+
+  <div class="bar"></div>
+  <div class="foot">制作・更新・保守までコミコミ<span class="sep">｜</span>相談・お見積り無料</div>
+
+  <div class="card">
+    <div class="head"></div>
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <i class="navybar"></i>
+    <i class="ln1"></i><i class="ln2"></i>
+    <i class="bx1"></i><i class="bx2"></i>
+    <i class="btn"><em></em></i>
+  </div>
+
+</div>
+</body>
+</html>
