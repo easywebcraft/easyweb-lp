@@ -11,13 +11,13 @@
 <meta property="og:site_name" content="EasyWebCraft">
 <meta property="og:title" content="EasyWebCraft｜初期費用0円・月額5,980円〜のホームページ制作">
 <meta property="og:description" content="制作も、更新も、保守もおまかせ。すぐはじめたい人のためのサブスク型ホームページ制作。相談・お見積りは無料です。">
-<meta property="og:url" content="https://k-matsumoto527.github.io/easyweb-lp/">
-<meta property="og:image" content="https://k-matsumoto527.github.io/easyweb-lp/ogp.png">
+<meta property="og:url" content="https://easywebcraft.github.io/easyweb-lp/">
+<meta property="og:image" content="https://easywebcraft.github.io/easyweb-lp/ogp.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="EasyWebCraft｜初期費用0円・月額5,980円〜のサブスク型ホームページ制作">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://k-matsumoto527.github.io/easyweb-lp/ogp.png">
+<meta name="twitter:image" content="https://easywebcraft.github.io/easyweb-lp/ogp.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d3a7d'/><text x='50' y='72' font-size='62' font-weight='bold' text-anchor='middle' font-family='sans-serif' fill='%23ffc61a'>E</text></svg>">
 <!-- フォント: Noto Sans JP（描画をブロックしない非同期読み込み。
      media="print"→onloadでallに切替える手法で、外部フォントCSSの取得を待たずに
@@ -219,11 +219,19 @@ section{scroll-margin-top:64px}
 .plan .p .u{font-size:13px; color:var(--muted)}
 .plan .taxin{color:var(--muted); font-size:12px; margin-top:6px}
 .opts{margin-top:20px; display:grid; gap:10px}
-.opt{display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--card); border:1px solid var(--line); border-radius:999px; padding:13px 22px; box-shadow:var(--shadow)}
+/* 金額は税込の注記まで入れると長く、スマホ幅では項目名と横に並べきれない
+   （390pxで数pxはみ出していた）。狭いうちは縦に積み、幅が取れてから左右に振り分ける。
+   min-width:0 が無いと、長い説明文が flex の縮み下限に効いて縮まない。 */
+.opt{display:flex; flex-direction:column; align-items:flex-start; gap:6px; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:14px 20px; box-shadow:var(--shadow)}
+.opt > div:first-child{min-width:0}
 .opt .on{font-weight:900; font-size:15px; color:var(--navy)}
 .opt .oc{color:var(--muted); font-size:12px}
-.opt .op{font-weight:900; color:var(--navy); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; font-size:15px}
+.opt .op{font-weight:900; color:var(--navy); font-variant-numeric:tabular-nums; text-align:left; font-size:15px}
 .opt .op small{color:var(--muted); font-weight:700; font-size:11px}
+@media(min-width:480px){
+  .opt{flex-direction:row; justify-content:space-between; align-items:center; gap:12px; border-radius:999px; padding:13px 22px}
+  .opt .op{white-space:nowrap; text-align:right}
+}
 .tax-note{color:var(--muted); font-size:12px; text-align:center; margin-top:14px}
 
 /* 月額に含まれるもの */
@@ -469,35 +477,35 @@ footer .flinks a:hover{color:#fff; text-decoration:underline}
     <div class="works">
       <div class="work">
         <div class="win" aria-hidden="true"><i></i><i></i><i></i></div>
-        <a class="prev" href="https://k-matsumoto527.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener" aria-label="美容室のサンプルサイトを新しいタブで見る">
+        <a class="prev" href="https://easywebcraft.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener" aria-label="美容室のサンプルサイトを新しいタブで見る">
           <img src="img/salon.webp" alt="美容室サイト hair salon TASHI の制作イメージ" width="800" height="478" loading="lazy">
         </a>
         <div class="wb">
           <span class="wtag">美容室</span>
           <div class="wname">hair salon TASHI</div>
-          <a class="visit" href="https://k-matsumoto527.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener">サイトを実際に見てみる →</a>
+          <a class="visit" href="https://easywebcraft.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener">サイトを実際に見てみる →</a>
         </div>
       </div>
       <div class="work">
         <div class="win" aria-hidden="true"><i></i><i></i><i></i></div>
-        <a class="prev" href="https://k-matsumoto527.github.io/my-website/" target="_blank" rel="noopener" aria-label="ダイニングのサンプルサイトを新しいタブで見る">
+        <a class="prev" href="https://easywebcraft.github.io/my-website/" target="_blank" rel="noopener" aria-label="ダイニングのサンプルサイトを新しいタブで見る">
           <img src="img/dining.webp" alt="飲食店サイト Dining TASHIRO の制作イメージ" width="800" height="476" loading="lazy">
         </a>
         <div class="wb">
           <span class="wtag">飲食店</span>
           <div class="wname">Dining TASHIRO</div>
-          <a class="visit" href="https://k-matsumoto527.github.io/my-website/" target="_blank" rel="noopener">サイトを実際に見てみる →</a>
+          <a class="visit" href="https://easywebcraft.github.io/my-website/" target="_blank" rel="noopener">サイトを実際に見てみる →</a>
         </div>
       </div>
       <div class="work">
         <div class="win" aria-hidden="true"><i></i><i></i><i></i></div>
-        <a class="prev" href="https://k-matsumoto527.github.io/kids-support-sample/" target="_blank" rel="noopener" aria-label="こども支援施設のサンプルサイトを新しいタブで見る">
+        <a class="prev" href="https://easywebcraft.github.io/kids-support-sample/" target="_blank" rel="noopener" aria-label="こども支援施設のサンプルサイトを新しいタブで見る">
           <img src="img/kids.webp" alt="こども支援施設サイト 〇〇KIDS の制作イメージ" width="800" height="391" loading="lazy">
         </a>
         <div class="wb">
           <span class="wtag">こども支援施設</span>
           <div class="wname">児童発達支援・放課後等デイ</div>
-          <a class="visit" href="https://k-matsumoto527.github.io/kids-support-sample/" target="_blank" rel="noopener">サイトを実際に見てみる →</a>
+          <a class="visit" href="https://easywebcraft.github.io/kids-support-sample/" target="_blank" rel="noopener">サイトを実際に見てみる →</a>
         </div>
       </div>
     </div>
