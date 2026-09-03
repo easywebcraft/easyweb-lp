@@ -85,16 +85,17 @@ footer a{color:#cfe0f5}
     <table>
       <tr><th>サービス</th><td>ホームページ制作・運用・保守（サブスクリプション）</td></tr>
       <tr><th>初期費用</th><td>0円</td></tr>
-      <tr><th>月額利用料</th><td>
+      <tr><th>商品・料金</th><td>
         EasyWebLP：月額5,980円（税込6,578円）／1ページ<br>
         EasyWebHP：月額7,700円（税込8,470円）／6ページまで<br>
         EasyWebHP＋：月額9,800円（税込10,780円）／ページ数上限なし<br>
-        オプション：EasyWebSEO（1,100円/記事〜）／EasyWebSNS（33,000円〜/月）
+        EasyWebSEO：1記事 1,100円（税込1,210円）<br>
+        EasyWebSNS：月額33,000円〜（税込36,300円〜）
       </td></tr>
       <tr><th>最低契約期間</th><td><b>6ヶ月</b>（公開日を含む月から起算／以後1ヶ月ごと自動更新）</td></tr>
       <tr><th>解約</th><td>解約希望月の<span class="todo">前月末日</span>までにご連絡。期間内解約は残余期間分のお支払いが必要です。</td></tr>
       <tr><th>制作データ</th><td>解約後の制作データは原則お渡ししません（希望時は別途費用）。</td></tr>
-      <tr><th>お支払い</th><td><span class="todo">口座振替／クレジットカード／銀行振込</span></td></tr>
+      <tr><th>お支払い</th><td><span class="todo">口座振替 または クレジットカード</span></td></tr>
     </table>
   </div>
 
@@ -119,18 +120,13 @@ footer a{color:#cfe0f5}
         <input type="tel" name="電話" autocomplete="tel" placeholder="例：090-0000-0000">
       </label>
 
-      <label class="f">ご希望プラン<span class="req">必須</span>
+      <label class="f">ご希望の商品<span class="req">必須・複数選択可</span>
         <div class="opts">
-          <label><input type="radio" name="プラン" value="EasyWebLP（1ページ）" required>EasyWebLP（1ページ・ランディングページ／月額5,980円税込6,578円）</label>
-          <label><input type="radio" name="プラン" value="EasyWebHP（6ページまで）">EasyWebHP（6ページまで／月額7,700円税込8,470円）</label>
-          <label><input type="radio" name="プラン" value="EasyWebHP＋（ページ数上限なし）">EasyWebHP＋（ページ数上限なし／月額9,800円税込10,780円）</label>
-        </div>
-      </label>
-
-      <label class="f">オプション（任意・複数選択可）
-        <div class="opts">
-          <label><input type="checkbox" name="オプション" value="EasyWebSEO">EasyWebSEO（検索対策の記事作成／1,100円税込1,210円 〜）</label>
-          <label><input type="checkbox" name="オプション" value="EasyWebSNS">EasyWebSNS（SNS運用代行／33,000円税込36,300円 〜）</label>
+          <label><input type="checkbox" name="商品" value="EasyWebLP（1ページ）">EasyWebLP（1ページ・ランディングページ／月額5,980円税込6,578円）</label>
+          <label><input type="checkbox" name="商品" value="EasyWebHP（6ページまで）">EasyWebHP（6ページまで／月額7,700円税込8,470円）</label>
+          <label><input type="checkbox" name="商品" value="EasyWebHP＋（ページ数上限なし）">EasyWebHP＋（ページ数上限なし／月額9,800円税込10,780円）</label>
+          <label><input type="checkbox" name="商品" value="EasyWebSEO">EasyWebSEO（検索対策の記事作成／1記事1,100円税込1,210円 〜）</label>
+          <label><input type="checkbox" name="商品" value="EasyWebSNS">EasyWebSNS（SNS運用代行／月額33,000円税込36,300円 〜）</label>
         </div>
       </label>
 
@@ -165,6 +161,12 @@ footer a{color:#cfe0f5}
 (function () {
   var form = document.getElementById('applyForm');
   form.addEventListener('submit', function (e) {
+    // 商品が1つも選ばれていない場合は送信しない
+    if (form.querySelectorAll('input[name="商品"]:checked').length === 0) {
+      e.preventDefault();
+      alert('ご希望の商品を1つ以上お選びください。');
+      return;
+    }
     // 同意チェックが外れている場合はブラウザの required バリデーションに委ねる
     if (!document.getElementById('agreeChk').checked) return;
     document.getElementById('agreedAt').value = new Date().toLocaleString('ja-JP');
