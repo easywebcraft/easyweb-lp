@@ -60,7 +60,7 @@ th{background:#eef4fb; color:var(--navy); font-weight:800; white-space:nowrap}
 .sign .box{flex:1; min-width:260px; border:1px solid var(--line); border-radius:12px; padding:18px 20px; background:#fbfdff; margin-top:14px}
 .sign .box h3{font-size:13px; color:var(--navy); margin-bottom:10px}
 .sign .box .line{font-size:13px; margin-bottom:14px}
-.sign .stamp{float:right; width:56px; height:56px; border:1px dashed #c3cede; border-radius:50%; text-align:center; line-height:56px; font-size:10px; color:#aab6c6}
+.sign .esign{float:right; padding:5px 12px; border:1px dashed var(--sky); border-radius:8px; font-size:11px; color:var(--sky); font-weight:800; background:#f3f9ff}
 
 .note{color:var(--muted); font-size:12px; margin-top:16px}
 footer{background:var(--navy-deep); color:#9fb3d1; text-align:center; padding:36px 22px; font-size:12px; line-height:2}
@@ -86,7 +86,7 @@ footer .logo{font-size:16px}
   <p class="date">契約書ドラフト・最終更新日：2026年9月3日</p>
 
   <div class="alert">
-    ⚠️ <b>これはドラフト（雛形）です。</b><span class="todo">黄色マーカー</span>の箇所は、実際の契約前に確定・記入してください。金額・最低契約期間・解約条件は特定商取引法に基づく表記と必ず整合させ、正式運用の前に弁護士等専門家のリーガルチェックを受けることをおすすめします。
+    ⚠️ <b>これはドラフト（雛形）です。</b>本契約書は<b>クラウドサイン（電子契約）での締結</b>を前提としています。<span class="todo">黄色マーカー</span>の箇所は、実際の契約前に確定・記入してください。金額・最低契約期間・解約条件は特定商取引法に基づく表記と必ず整合させ、正式運用の前に弁護士等専門家のリーガルチェックを受けることをおすすめします。
   </div>
 
   <div class="card">
@@ -225,26 +225,34 @@ footer .logo{font-size:16px}
     </div>
 
     <div class="art">
-      <h2>第15条（本契約の証）</h2>
-      <p>本契約の成立を証するため、本書を電磁的方法または書面により作成し、甲乙が合意のうえ、各自その内容を保有します。</p>
+      <h2>第15条（電子契約による締結）</h2>
+      <ol class="num">
+        <li>本契約は、電子契約サービス「クラウドサイン」（弁護士ドットコム株式会社提供）を利用して電子的に締結します。甲および乙は、本契約書の電子ファイルに同サービス上で電子署名を行うことにより、本契約が成立することに合意します。</li>
+        <li>甲乙は、前項の電子署名をもって、書面への署名または記名押印に代えるものとし、本契約書の電子ファイルを本契約成立の証とすることに同意します。</li>
+        <li>本契約の締結日は、甲乙双方の電子署名が完了し、クラウドサイン上で合意が成立した日とします。</li>
+        <li>本契約は電子契約により締結されるため、収入印紙の貼付を要しません。甲乙は、本契約書の電子ファイルおよびクラウドサインが発行する合意締結証明書を各自保管するものとします。</li>
+      </ol>
     </div>
 
     <div class="sign">
-      <p class="intro" style="margin-top:18px">締結日：<span class="todo">　　　　年　　月　　日</span></p>
+      <p class="intro" style="margin-top:18px">締結日：クラウドサイン上で甲乙双方の電子署名が完了した日</p>
+      <p class="note" style="margin-top:2px">※本契約はクラウドサインで締結します。以下は当事者の表示であり、署名・押印はクラウドサイン上の電子署名によって行われます。</p>
       <div class="row">
         <div class="box">
-          <div class="stamp">印</div>
+          <div class="esign">✎ 電子署名</div>
           <h3>甲（サービス提供者）</h3>
           <div class="line">株式会社TAC</div>
           <div class="line">愛知県名古屋市守山区瀬古東1-1701 201</div>
           <div class="line">代表者：<span class="fill"></span></div>
+          <div class="line">署名者メールアドレス：<span class="fill"></span></div>
         </div>
         <div class="box">
-          <div class="stamp">印</div>
+          <div class="esign">✎ 電子署名</div>
           <h3>乙（お客様）</h3>
           <div class="line">住所：<span class="fill"></span></div>
           <div class="line">氏名／会社名：<span class="fill"></span></div>
           <div class="line">担当者：<span class="fill"></span></div>
+          <div class="line">署名者メールアドレス：<span class="fill"></span></div>
         </div>
       </div>
     </div>
