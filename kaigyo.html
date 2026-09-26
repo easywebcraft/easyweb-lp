@@ -88,7 +88,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .hero .for{margin:0; font-size:18px; font-weight:700; letter-spacing:.04em}
 .hero h1{margin:26px 0 0; font-size:clamp(32px,9.4vw,38px); font-weight:900; line-height:1.34; letter-spacing:.01em}
 .hero h1 em{font-style:normal; color:var(--accent); font-size:clamp(40px,11.5vw,44px); margin-right:.04em}
-.hero .kind{margin:22px 0 0; font-size:15px; font-weight:400; color:rgba(255,255,255,.88); line-height:1.8}
+.hero .kind{margin:22px 0 0; font-size:16px; font-weight:700; color:rgba(255,255,255,.92); line-height:1.8}
 .fv-price{margin:36px 0 0}
 .fv-price p{margin:0}
 .fv-price .lbl{font-size:16px; font-weight:700; color:var(--hero-sub); letter-spacing:.1em}
@@ -97,7 +97,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .fv-price .mon{font-size:17px; font-weight:800}
 .fv-price .mon .num{font-size:clamp(24px,7vw,28px); font-weight:900; margin:0 2px}
 .fv-note{font-size:12px; color:var(--hero-sub); margin:6px 0 28px !important}
-.fv-cap{margin:14px 0 0; font-size:12px; font-weight:700; color:var(--hero-sub)}
+.fv-cap{margin:16px 0 0; font-size:14px; font-weight:700; color:#fff}
 .fv-cap span{margin:0 6px; opacity:.6}
 
 /* ボタン */
@@ -154,7 +154,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 /* ⑥ デザイン案のイメージ（PC＋スマホ） */
 .mock{position:relative; max-width:520px; margin:28px auto 8px; padding-right:18%}
 .mock .pc{border:8px solid #1b2437; border-bottom-width:14px; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 14px 30px rgba(13,42,90,.16)}
-.mock .pc img{display:block; width:100%; aspect-ratio:800/476; object-fit:cover; object-position:top}
+.mock .pc img{display:block; width:100%; height:auto; aspect-ratio:800/476; object-fit:cover; object-position:top}
 .mock .phone{position:absolute; right:0; bottom:-14px; width:26%; border-width:5px; border-radius:16px}
 .mock-cap{font-size:12px; color:var(--muted); margin:22px 0 0}
 .mock-ttl{font-size:16px; font-weight:800; color:var(--navy); margin:30px 0 0}
@@ -235,6 +235,44 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .seo-note b{display:block; color:var(--navy)}
 .why li{background:var(--wash); border-radius:12px; padding:10px 6px; text-align:center; font-size:13px; font-weight:700; color:var(--navy)}
 
+/* 短くした WHY */
+.scene{list-style:none; margin:10px auto 0; padding:0; max-width:340px; display:grid; gap:22px}
+.scene li{position:relative; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 14px; text-align:center; font-weight:700; color:var(--navy)}
+.scene li + li::before{content:"↓"; position:absolute; top:-21px; left:50%; transform:translateX(-50%); color:var(--muted); font-weight:400}
+.scene li.hp{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:800; font-size:17px}
+/* 制作事例: PC＋スマホの完成形を大きく */
+.cases{display:grid; grid-auto-flow:column; grid-auto-columns:88%; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 4px 14px; margin:0 -4px}
+@media(min-width:760px){ .cases{grid-auto-flow:row; grid-template-columns:repeat(3,1fr); overflow:visible} }
+.case{scroll-snap-align:center; text-decoration:none; color:inherit; text-align:center}
+.case .mock{margin:0 0 18px}
+.case b{display:block; font-size:16px; color:var(--navy)}
+.case span{font-size:12px; color:var(--sky); font-weight:700}
+/* 無料デザイン案 */
+.mock-lg{max-width:600px; padding-right:14%}
+.mock-lg .phone{width:28%}
+.flow4{list-style:none; margin:30px auto 0; padding:0; max-width:520px; display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
+.flow4 li{position:relative; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 2px; font-size:12px; font-weight:700; color:var(--navy); line-height:1.4; display:flex; flex-direction:column; justify-content:center}
+.flow4 li small{display:block; color:var(--ok); font-size:15px; font-weight:800}
+.flow4 li + li::before{content:"→"; position:absolute; left:-15px; top:50%; transform:translateY(-50%); color:var(--muted); font-weight:400}
+.flow4 li.judge{background:var(--navy); border-color:var(--navy); color:#fff; font-weight:800; font-size:13px}
+.free-def{margin:26px auto 0; max-width:460px; display:grid; gap:6px}
+.free-def b{display:block; background:#eaf3ea; color:var(--ok); border-radius:10px; padding:10px 12px; font-size:15px; font-weight:800}
+/* 料金: おすすめ1枚＋補足 */
+.plan.feature{max-width:460px; margin:0 auto}
+.alt{list-style:none; margin:14px auto 0; padding:0; max-width:460px; display:grid; gap:8px}
+.alt li{display:flex; justify-content:space-between; align-items:center; gap:10px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 16px; font-size:13px; color:var(--muted)}
+.alt b{display:block; color:var(--navy); font-size:14px}
+.alt em{font-style:normal; color:var(--navy); font-weight:700; white-space:nowrap}
+.alt em .num{font-size:20px}
+.monthly{margin:26px auto 0; max-width:560px; background:var(--wash); border-radius:16px; padding:18px}
+.monthly p{margin:0; font-size:13px}
+.monthly p b{display:block; color:var(--navy); font-size:15px; margin-bottom:4px}
+.monthly ul{list-style:none; margin:12px 0; padding:0; display:flex; flex-wrap:wrap; gap:6px}
+.monthly li{background:#fff; color:var(--navy); font-size:12px; font-weight:700; border-radius:999px; padding:3px 10px}
+.monthly .seo-note{font-size:11px; color:var(--muted)}
+/* 最後 */
+.last h2.last-h{font-size:clamp(28px,8vw,36px); font-weight:900}
+.form-before{margin:0; text-align:center; font-size:13px; font-weight:700; color:var(--navy); background:var(--wash); border-radius:10px; padding:10px}
 /* ④ 答え: 3つの特徴 */
 .answer-lead{text-align:center; font-size:16px; font-weight:700; margin:0 0 30px}
 .points{display:grid; gap:14px; counter-reset:p}
@@ -360,7 +398,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   <div class="wrap">
     <p class="for">これから開業する方へ</p>
     <h1>ホームページの<br>デザイン案を<br><em>無料</em>で作ります。</h1>
-    <p class="kind">「何を載せればいいかわからない」<br>そんな状態からご相談ください。</p>
+    <p class="kind">開業前・何も決まっていない状態からOK</p>
     <div class="fv-price">
       <p class="lbl">初期費用</p>
       <p class="zero"><span class="num">0</span>円</p>
@@ -368,7 +406,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <p class="fv-note">最低契約期間6ヶ月・税別（税込6,578円～）</p>
     </div>
     <a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a>
-    <p class="fv-cap">開業前OK<span aria-hidden="true">｜</span>見てから契約OK<span aria-hidden="true">｜</span>しつこい営業なし</p>
+    <p class="fv-cap">開業前OK<span aria-hidden="true">｜</span>見てから契約OK<span aria-hidden="true">｜</span>1営業日以内に返信</p>
   </div>
 </header>
 
@@ -395,18 +433,14 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
 <section>
   <div class="wrap reveal">
     <span class="eyebrow">WHY</span>
-    <h2>開業すると、あなたの事業を<br>検索される機会が増えます</h2>
-    <p class="lead">はじめての相手ほど、会う前・行く前に確かめます。</p>
-    <ul class="seen">
-      <li><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h6"/><path d="M7 14h4"/></svg></span>名刺<small>名刺を受け取った人</small></li>
-      <li><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="16.8" cy="7.2" r=".6"/></svg></span>SNS<small>SNSを見た人</small></li>
-      <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></span>Google<small>店名・会社名で検索した人</small></li>
-      <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M3 20c.5-3.5 2.6-5.5 5-5.5s4.5 2 5 5.5"/><path d="M13.5 15.5c.9-1 2-1.5 3-1.5 2 0 3.6 1.8 4 5"/></svg></span>紹介<small>紹介された取引先候補</small></li>
-    </ul>
-    <p class="seen-to" aria-hidden="true">↓</p>
-    <p class="seen-hp">「もっと詳しく知りたい」<br>→ ホームページを見る</p>
-    <p class="seen-close">「ここ、どんな会社・お店なんだろう？」<br>そんなとき、<span class="mk">事業内容を確認できるホームページ</span>があると安心です。</p>
-    <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a></div>
+    <h2>開業すると、<br>こんな場面があります</h2>
+    <ol class="scene">
+      <li>名刺を渡す</li>
+      <li>SNSを見てもらう</li>
+      <li>店名・会社名を検索される</li>
+      <li>「どんな事業？」</li>
+      <li class="hp">ホームページ</li>
+    </ol>
   </div>
 </section>
 
@@ -428,19 +462,19 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
 <section id="works">
   <div class="wrap reveal">
     <span class="eyebrow">WORKS</span>
-    <h2>実際にこんなサイトを<br>作っています</h2>
+    <h2>あなたの事業なら、<br>こんなHPになります。</h2>
     <p class="lead">美容室・飲食店・こども支援施設。業種に合わせてデザインします。</p>
-    <div class="shots">
-      <a href="https://k-matsumoto527.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener">
-        <div class="phone"><img src="img/m-salon.webp" alt="美容室サイト hair salon TASHI のスマホ画面" width="390" height="844" loading="lazy"></div>
+    <div class="cases">
+      <a class="case" href="https://k-matsumoto527.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener">
+        <div class="mock"><div class="pc"><img src="img/salon.webp" alt="美容室サイト hair salon TASHI のPC画面" width="800" height="478" loading="lazy"></div><div class="phone"><img src="img/m-salon.webp" alt="美容室サイトのスマホ画面" width="390" height="844" loading="lazy"></div></div>
         <b>美容室</b><span>サイトを見る ↗</span>
       </a>
-      <a href="https://k-matsumoto527.github.io/my-website/" target="_blank" rel="noopener">
-        <div class="phone"><img src="img/m-dining.webp" alt="飲食店サイト Dining TASHIRO のスマホ画面" width="390" height="844" loading="lazy"></div>
+      <a class="case" href="https://k-matsumoto527.github.io/my-website/" target="_blank" rel="noopener">
+        <div class="mock"><div class="pc"><img src="img/dining.webp" alt="飲食店サイト Dining TASHIRO のPC画面" width="800" height="476" loading="lazy"></div><div class="phone"><img src="img/m-dining.webp" alt="飲食店サイトのスマホ画面" width="390" height="844" loading="lazy"></div></div>
         <b>飲食店</b><span>サイトを見る ↗</span>
       </a>
-      <a href="https://k-matsumoto527.github.io/kids-support-sample/" target="_blank" rel="noopener">
-        <div class="phone"><img src="img/m-kids.webp" alt="こども支援施設サイトのスマホ画面" width="390" height="844" loading="lazy"></div>
+      <a class="case" href="https://k-matsumoto527.github.io/kids-support-sample/" target="_blank" rel="noopener">
+        <div class="mock"><div class="pc"><img src="img/kids.webp" alt="こども支援サイト 児童発達支援・放課後等デイ のPC画面" width="800" height="391" loading="lazy"></div><div class="phone"><img src="img/m-kids.webp" alt="こども支援サイトのスマホ画面" width="390" height="844" loading="lazy"></div></div>
         <b>こども支援</b><span>サイトを見る ↗</span>
       </a>
     </div>
@@ -453,7 +487,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
             <div class="bar">instagram</div>
             <div class="prof"><span class="av"></span><div style="flex:1"><div class="ln"></div><div class="ln" style="width:60%"></div></div></div>
             <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="qs"><span>何のお店？</span><span>料金はどこ？</span><span>営業時間は？</span></div>
+            <div class="qs"><span>どんな店？</span><span>料金どこ？</span><span>営業時間は？</span></div>
           </div>
         </div>
         <figcaption>BEFORE<br>SNSだけ</figcaption>
@@ -463,19 +497,11 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <figure class="after">
         <div class="phone"><img src="img/m-salon.webp" alt="美容室のサンプルサイトをスマホで見た画面" width="390" height="844" loading="lazy"></div>
         <figcaption>AFTER<br>公式サイトあり</figcaption>
-        <div class="after-list"><span>サービス</span><span>料金</span><span>営業時間</span><span>アクセス</span><span>お問い合わせ</span></div>
+        <div class="after-list"><span>料金</span><span>営業時間</span><span>アクセス</span><span>サービス</span><span>問い合わせ</span></div>
       </figure>
     </div>
     <p class="ba-msg">「SNSだけ」から<br><span class="mk">「公式サイトがある状態」</span>へ。</p>
 
-    <div class="pages">
-      <div class="phone"><img src="img/m-dining.webp" alt="飲食店のサンプルサイトをスマホで見た画面" width="390" height="844" loading="lazy"></div>
-      <div>
-        <h3>こんなホームページに<br>なります</h3>
-        <ul><li>トップ</li><li>お店・会社の紹介</li><li>サービス・メニュー</li><li>料金</li><li>アクセス</li><li>お問い合わせ</li></ul>
-        <p class="note">ページ数はプランによります（EasyWebHPは6ページまで）。</p>
-      </div>
-    </div>
     <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a></div>
   </div>
 </section>
@@ -485,24 +511,20 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   <div class="wrap reveal">
     <div class="offer">
       <span class="pre">いきなり契約しなくてOK。</span>
-      <h2>あなたの事業の<br><span class="yl">トップページ案を<br class="sp">無料で作ります。</span></h2>
-      <p class="lead" style="margin-bottom:0">ヒアリングをもとに、実際のデザイン案をお見せします。</p>
-      <p class="mock-ttl">実際にこんなデザイン案を作ります</p>
-      <div class="mock">
-        <div class="pc"><img src="img/dining.webp" alt="デザイン案のイメージ（PC版）" width="800" height="476" loading="lazy"></div>
-        <div class="phone"><img src="img/m-dining.webp" alt="デザイン案のイメージ（スマホ版）" width="390" height="844" loading="lazy"></div>
+      <h2>まず、あなたのHPを<br><span class="yl">見てから決めてください。</span></h2>
+      <div class="mock mock-lg">
+        <div class="pc"><img src="img/dining.webp" alt="デザイン案の例（PC版）" width="800" height="476" loading="lazy"></div>
+        <div class="phone"><img src="img/m-dining.webp" alt="デザイン案の例（スマホ版）" width="390" height="844" loading="lazy"></div>
       </div>
-      <p class="mock-cap">PC版とスマホ版の両方をお見せします。<br>※掲載画像は制作イメージです（架空のお店で作成）。</p>
-      <ol class="offer-flow">
-        <li>相談<b><span class="num">0</span>円</b></li>
-        <li>ヒアリング<b><span class="num">0</span>円</b></li>
-        <li>デザイン案<b><span class="num">0</span>円</b></li>
-        <li class="see"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>実物を見る</li>
-        <li class="last">契約するか判断</li>
+      <p class="mock-cap">※掲載画像は制作例です（架空のお店で作成）</p>
+      <ol class="flow4">
+        <li>相談<small><span class="num">0</span>円</small></li>
+        <li>ヒアリング<small><span class="num">0</span>円</small></li>
+        <li>デザイン案<small><span class="num">0</span>円</small></li>
+        <li class="judge">見てから<br>判断</li>
       </ol>
-      <p class="ok">「ホームページを作るか迷っている」段階でもOKです。</p>
-      <p class="fine">無料でお作りするのは、トップページ1ページ分のデザイン案です。見て見送られても、費用は一切かかりません。</p>
-      <div class="mid-cta" style="margin-top:26px"><a class="btn btn-cta btn-block btn-long" href="#contact">このレベルのデザイン案を無料で見る</a></div>
+      <p class="free-def"><b>トップページ1ページ分の<br class="sp">デザイン案を無料で作成</b><b>見送っても費用は<span class="num">0</span>円</b></p>
+      <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a></div>
     </div>
   </div>
 </section>
@@ -512,66 +534,35 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   <div class="wrap reveal">
     <span class="eyebrow">PRICE</span>
     <h2>料金</h2>
-    <p class="lead">開業直後の出費を増やさないよう、初期費用はいただきません。</p>
     <p class="price-top"><span class="z">初期費用<b class="num">0</b>円</span><span class="min">最低契約期間6ヶ月</span></p>
-    <ul class="choose">
-      <li><b>EasyWebLP</b><span>名刺代わりにまず1ページ</span></li>
-      <li class="reco"><b>EasyWebHP</b><span>会社・店舗をしっかり紹介</span><em>開業時のおすすめ</em></li>
-      <li><b>EasyWebHP＋</b><span>ページをどんどん増やしたい</span></li>
-    </ul>
-    <div class="plans">
-      <div class="plan">
-        <div class="side">名刺代わりにまず1ページ</div>
-        <div class="name">EasyWebLP</div>
-        <div class="cap">1ページ</div>
-        <div class="p"><b class="num">5,980</b><span>円/月（税別）</span></div>
-        <div class="taxin">税込 6,578円/月</div>
-      </div>
-      <div class="plan reco">
-        <span class="tag">開業時のおすすめ</span>
-        <div class="side">会社・店舗をしっかり紹介</div>
-        <div class="name">EasyWebHP</div>
-        <div class="cap">6ページまで</div>
-        <div class="p"><b class="num">7,700</b><span>円/月（税別）</span></div>
-        <div class="taxin">税込 8,470円/月</div>
-        <div class="fit">会社・サービス・料金・アクセスまで<br>しっかり伝えたい方に</div>
-      </div>
-      <div class="plan">
-        <div class="side">ページをどんどん増やしたい</div>
-        <div class="name">EasyWebHP＋</div>
-        <div class="cap">ページ数の上限なし</div>
-        <div class="p"><b class="num">9,800</b><span>円/月（税別）</span></div>
-        <div class="taxin">税込 10,780円/月</div>
-      </div>
+    <div class="plan reco feature">
+      <span class="tag">開業時のおすすめ</span>
+      <div class="name">EasyWebHP</div>
+      <div class="cap">6ページまで</div>
+      <div class="p"><b class="num">7,700</b><span>円/月（税別）</span></div>
+      <div class="taxin">税込 8,470円/月</div>
+      <div class="fit">会社・店舗・サービス・料金・アクセスまで<br>まとめて掲載</div>
     </div>
-    <p class="terms">※表示は税別価格です。最低契約期間は6ヶ月です。詳しい条件は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご覧ください。</p>
+    <ul class="alt">
+      <li><span><b>EasyWebLP</b>まず1ページ</span><em><span class="num">5,980</span>円/月</em></li>
+      <li><span><b>EasyWebHP＋</b>ページを増やしたい方</span><em><span class="num">9,800</span>円/月</em></li>
+    </ul>
+    <div class="monthly">
+      <p><b>公開後もサポートするから、月額制です。</b>サーバー・SSL・保守・更新まで、月額にふくまれます。</p>
+      <ul><li>デザイン制作</li><li>スマホ対応</li><li>サーバー・SSL</li><li>更新・修正</li><li>保守管理</li><li>お問い合わせフォーム</li><li>検索の基本設定</li></ul>
+      <p class="seo-note">検索の基本設定＝ページタイトル・説明文・見出しの構造など、公開時に必要な基本的なSEOの設定です。</p>
+    </div>
+    <p class="terms">※表示は税別価格です（LP 税込6,578円／HP＋ 税込10,780円）。最低契約期間は6ヶ月です。詳しい条件は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご覧ください。</p>
     <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a></div>
   </div>
 </section>
 
-<!-- ⑧ なぜ月額？ -->
-<section class="wash">
-  <div class="wrap reveal">
-    <span class="eyebrow">WHY MONTHLY</span>
-    <h2>なぜ月額制なの？</h2>
-    <p class="lead">ホームページは「作って終わり」ではないからです。</p>
-    <div class="why">
-      <p class="ans">EasyWebCraftは、ホームページを「作って終わり」にしません。<br><b>サーバー・SSL・保守・更新まで継続してサポートするため、初期費用を抑えて月額制にしています。</b></p>
-      <ul>
-        <li>デザイン制作</li><li>スマホ対応</li><li>サーバー</li><li>独自SSL</li>
-        <li>更新・修正</li><li>保守管理</li><li>お問い合わせフォーム</li><li>検索の基本設定</li>
-      </ul>
-      <p class="seo-note"><b>検索の基本設定とは</b>ページタイトル・説明文・見出しの構造など、公開時に必要な基本的なSEOの設定です。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ⑨ 初めてでも大丈夫 -->
+<!-- ⑧ 初めてでも大丈夫 -->
 <section>
   <div class="wrap reveal">
     <span class="eyebrow">FOR BEGINNERS</span>
-    <h2>ホームページの知識が<br>なくても大丈夫です</h2>
-    <p class="lead">「何もない」ところからのご相談がほとんどです。</p>
+    <h2>HPを作りたいけど、<br>何から始めればいい？</h2>
+    <p class="lead">そこから一緒に整理します。</p>
     <div class="safe">
       <ul class="voices">
         <li>何を載せればいいかわからない</li>
@@ -588,7 +579,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   </div>
 </section>
 
-<!-- ⑩ 制作の流れ -->
+<!-- ⑨ 制作の流れ -->
 <section class="wash2">
   <div class="wrap reveal">
     <span class="eyebrow">FLOW</span>
@@ -605,7 +596,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   </div>
 </section>
 
-<!-- ⑪ FAQ -->
+<!-- ⑩ FAQ -->
 <section class="wash">
   <div class="wrap reveal">
     <span class="eyebrow">FAQ</span>
@@ -616,20 +607,19 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <div class="qa"><button class="q" type="button" aria-expanded="false">開業前でも相談できますか？</button><div class="a"><div class="a-in">できます。開業日や事業の内容がまだ固まっていない段階でも大丈夫です。開業日から逆算して進め方をご提案します。</div></div></div>
       <div class="qa"><button class="q" type="button" aria-expanded="false">ホームページの知識がなくても大丈夫ですか？</button><div class="a"><div class="a-in">大丈夫です。制作も公開後の更新もこちらで行うので、難しい操作はありません。</div></div></div>
       <div class="qa"><button class="q" type="button" aria-expanded="false">写真や文章がありません。</button><div class="a"><div class="a-in">相談しながら準備できます。文章はお話をもとにこちらで下書きし、写真は手元のものの選び方からご相談に乗ります。</div></div></div>
-      <div class="qa"><button class="q" type="button" aria-expanded="false">スマホで見やすくできますか？</button><div class="a"><div class="a-in">対応します。すべてのプランがスマホ・タブレット対応です。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">相談したら、契約しないといけませんか？</button><div class="a"><div class="a-in">いいえ。相談・お見積り、そしてトップページのデザイン案の作成までは無料です。デザイン案をご覧になってから決めていただけますし、見送られても費用はかかりません。しつこい営業もいたしません。</div></div></div>
       <div class="qa"><button class="q" type="button" aria-expanded="false">料金はいくらですか？</button><div class="a"><div class="a-in">初期費用0円、月額5,980円（税込6,578円）からです。1ページのEasyWebLP、6ページまでのEasyWebHP（月額7,700円・税込8,470円）、ページ数の上限がないEasyWebHP＋（月額9,800円・税込10,780円）があります。</div></div></div>
       <div class="qa"><button class="q" type="button" aria-expanded="false">開業日に間に合いますか？</button><div class="a"><div class="a-in">内容やページ数によって変わります。無料相談で開業予定日をうかがい、間に合うかどうかと進め方をお伝えします。お早めのご相談がおすすめです。</div></div></div>
-      <div class="qa"><button class="q" type="button" aria-expanded="false">相談したら、契約しないといけませんか？</button><div class="a"><div class="a-in">いいえ。相談・お見積り、そしてトップページのデザイン案の作成までは無料です。デザイン案をご覧になってから決めていただけますし、見送られても費用はかかりません。しつこい営業もいたしません。</div></div></div>
       <div class="qa"><button class="q" type="button" aria-expanded="false">契約期間はありますか？</button><div class="a"><div class="a-in">最低契約期間は6ヶ月です。解約などの詳しい条件は、ご契約前に書面でご説明します。</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ⑫ 最後のCTA -->
+<!-- ⑪ 最後のCTA -->
 <section class="last" id="contact">
   <div class="wrap reveal">
     <span class="eyebrow">CONTACT</span>
-    <h2><small class="last-pre">開業前・開業直後の方へ</small>まだ何も決まっていなくても<br>大丈夫です</h2>
+    <h2 class="last-h"><small class="last-pre">開業前・開業直後の方へ</small>まだ何も<br>決まっていなくてもOK</h2>
     <p class="lead">トップページのデザイン案までは無料。見てから決めてください。<br>1営業日以内にご返信します。</p>
     <ul class="states">
       <li>まだ屋号が決まっていない</li>
@@ -662,6 +652,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <label>ご相談内容 <span class="opt-tag">（任意）</span>
         <textarea name="body" rows="4" placeholder="例：11月に開業予定。業種は整体。何を載せればいいかから相談したい。"></textarea>
       </label>
+      <p class="form-before">送信後、1営業日以内にご連絡します。<br>トップページのデザイン案についてご相談します。</p>
       <p class="form-privacy">送信いただいた内容は<a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に基づいて取り扱います。</p>
       <button class="btn btn-cta btn-block" type="submit">無料でデザイン案を見る</button>
       <p class="form-err" id="form-err" hidden>送信できませんでした。お手数ですが、時間をおいて再度お試しください。</p>
