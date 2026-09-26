@@ -318,7 +318,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .cta-bar .btn{display:block; padding:13px 8px; font-size:15px}
 
 footer{background:#061430; color:#9fb4d6; padding:36px 0 44px; text-align:center; font-size:12px}
-footer .logo{display:block; margin-bottom:6px; font-size:17px}
+footer .logo{display:block; margin-bottom:14px}
 footer a{color:#cfe0f5}
 
 @media (min-width: 960px){
@@ -335,13 +335,19 @@ footer a{color:#cfe0f5}
   .hero h1 em{font-size:56px}
     .checks{max-width:760px; margin:0 auto}
 }
+/* ロゴ画像（白＋黄の文字ロゴ。ヘッダーは文字だけの版、フッターはサブタイトル付き） */
+.logo img{display:block; height:18px; width:auto}
+footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
+@media (min-width:960px){ .top .logo img, .logo img{height:22px} footer .logo img{height:auto; width:260px} }
+@media (max-width:430px){ .logo img{height:16px} .top-cta{font-size:12px; padding:7px 12px} }
+@media (max-width:370px){ .logo img{height:14px} .top-cta{font-size:11px; padding:7px 10px} }
 </style>
 </head>
 <body>
 
 <div class="top">
   <div class="top-in">
-    <a class="logo" href="#top" aria-label="ページの先頭へ">EasyWeb<span>Craft</span></a>
+    <a class="logo" href="#top" aria-label="EasyWebCraft ページの先頭へ"><img src="img/logo-mark.webp" alt="EasyWebCraft" width="640" height="69"></a>
     <a class="top-cta" href="#contact">無料でデザイン案を見る</a>
   </div>
 </div>
@@ -662,7 +668,7 @@ footer a{color:#cfe0f5}
 </main>
 
 <footer>
-  <span class="logo">EasyWeb<span>Craft</span></span>
+  <span class="logo"><img src="img/logo-full.webp" alt="EasyWebCraft Web Design &amp; Development" width="800" height="124" loading="lazy"></span>
   <div>運営：株式会社TAC</div>
   <div>愛知県名古屋市守山区瀬古東1-1701 201</div>
   <div style="margin-top:12px"><a href="privacy.html">プライバシーポリシー</a>｜<a href="tokushoho.html">特定商取引法に基づく表記</a></div>

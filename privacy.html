@@ -34,12 +34,16 @@ li{margin-bottom:4px}
 a{color:var(--sky)}
 .todo{background:#fff23c; font-weight:800; padding:0 4px; border-radius:3px}
 footer{background:var(--navy-deep); color:#9fb3d1; text-align:center; padding:36px 22px; font-size:12px; line-height:2}
-footer .logo{font-size:16px}
+footer .logo{margin-bottom:10px}
+/* ロゴ画像（白＋黄の文字ロゴ。ヘッダーは文字だけの版、フッターはサブタイトル付き） */
+.logo img{display:block; height:18px; width:auto}
+footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
+@media (min-width:960px){ .top .logo img, .logo img{height:22px} footer .logo img{height:auto; width:260px} }
 </style>
 </head>
 <body>
 <div class="top"><div class="top-in">
-  <a class="logo" href="./">EasyWeb<span>Craft</span></a>
+  <a class="logo" href="./"><img src="img/logo-mark.webp" alt="EasyWebCraft" width="640" height="69"></a>
   <a class="back" href="./">← トップへ戻る</a>
 </div></div>
 
@@ -91,7 +95,7 @@ footer .logo{font-size:16px}
 </main>
 
 <footer>
-  <div class="logo">EasyWeb<span>Craft</span></div>
+  <div class="logo"><img src="img/logo-full.webp" alt="EasyWebCraft Web Design &amp; Development" width="800" height="124" loading="lazy"></div>
   <div>ホームページ制作・運用・保守サービス</div>
   <div>運営：株式会社TAC</div>
 </footer>

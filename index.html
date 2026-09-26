@@ -305,7 +305,7 @@ section{scroll-margin-top:64px}
 .cta-bar .btn{flex:1; padding:13px 8px; font-size:15px}
 
 footer{background:var(--navy-deep); color:#9fb4d6; padding:42px 0 52px; text-align:center; font-size:12px}
-footer .logo{font-weight:800; color:#fff; font-size:17px; margin-bottom:6px}
+footer .logo{margin-bottom:14px}
 footer .logo span{color:var(--accent)}
 footer .flinks{margin-top:14px}
 footer .flinks a{color:#cfe0f5; text-decoration:none}
@@ -359,6 +359,10 @@ footer .flinks a:hover{color:#fff; text-decoration:underline}
   .feat{transition:transform .18s ease, box-shadow .18s ease}
   .feat:hover{transform:translateY(-4px); box-shadow:0 18px 40px rgba(13,58,125,.14)}
 }
+/* ロゴ画像（白＋黄の文字ロゴ。ヘッダーは文字だけの版、フッターはサブタイトル付き） */
+.logo img{display:block; height:18px; width:auto}
+footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
+@media (min-width:960px){ .top .logo img, .logo img{height:22px} footer .logo img{height:auto; width:260px} }
 </style>
 <!-- 構造化データ（検索エンジン向け・運営会社とサービス／料金情報） -->
 <script type="application/ld+json">
@@ -433,7 +437,7 @@ footer .flinks a:hover{color:#fff; text-decoration:underline}
 <!-- 固定ヘッダー（ガラス風） -->
 <div class="top">
   <div class="top-in">
-    <a class="logo" href="#top" aria-label="トップへ戻る">EasyWeb<span>Craft</span></a>
+    <a class="logo" href="#top" aria-label="EasyWebCraft トップへ戻る"><img src="img/logo-mark.webp" alt="EasyWebCraft" width="640" height="69"></a>
     <nav class="gnav" aria-label="ページ内メニュー">
       <a href="#features">特徴</a>
       <a href="#works">制作サンプル</a>
@@ -751,7 +755,7 @@ footer .flinks a:hover{color:#fff; text-decoration:underline}
 </section>
 
 <footer>
-  <div class="logo">EasyWeb<span>Craft</span></div>
+  <div class="logo"><img src="img/logo-full.webp" alt="EasyWebCraft Web Design &amp; Development" width="800" height="124" loading="lazy"></div>
   <div>ホームページ制作・運用・保守サービス</div>
   <div>運営：株式会社TAC</div>
   <div>愛知県名古屋市守山区瀬古東1-1701 201</div>
