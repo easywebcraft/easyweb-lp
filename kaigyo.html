@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>EasyWebCraft｜これから開業する方のホームページ制作</title>
+<meta name="description" content="これから開業する方・開業したばかりの方へ。トップページのデザイン案までは無料、見てから決められます。初期費用0円・月額5,980円〜のホームページ制作。相談は無料です。">
+<link rel="canonical" href="https://easywebcraft.github.io/easyweb-lp/kaigyo.html">
+<!-- OGP（LINE・SNSでURLを共有したときのプレビュー用） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EasyWebCraft">
+<meta property="og:title" content="これから開業する方へ。「ちゃんとしたホームページ」を開業時から。">
+<meta property="og:description" content="トップページのデザイン案までは無料、見てから決められます。初期費用0円・月額5,980円〜。開業前のご相談も無料です。">
+<meta property="og:url" content="https://easywebcraft.github.io/easyweb-lp/kaigyo.html">
+<meta property="og:image" content="https://easywebcraft.github.io/easyweb-lp/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://easywebcraft.github.io/easyweb-lp/ogp.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d3a7d'/><text x='50' y='72' font-size='62' font-weight='bold' text-anchor='middle' font-family='sans-serif' fill='%23ffc61a'>E</text></svg>">
+<link rel="preload" as="image" href="top.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=optional"></noscript>
+<style>
+/* 開業者向けの広告LP。色は本体LP（index.html）と揃える。行動は「無料相談」だけに絞るのでナビは置かない */
+:root{
+  --navy:#0d3a7d; --navy-deep:#081c3f; --ink:#1a2433; --muted:#5b6b7e;
+  --paper:#ffffff; --wash:#eef4fb; --wash2:#f7fafd;
+  --accent:#ffc61a; --accent-ink:#3a2e00; --mk:#fff23c;
+  --sky:#3f8ecf; --line:#dde6f0; --card:#ffffff; --ng:#c8553d; --ok:#1a8f3c;
+  --shadow:0 10px 30px rgba(13,58,125,.08);
+  --hero-sub:#b9c9e4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); background:var(--paper);
+  font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic",YuGothic,Meiryo,sans-serif;
+  line-height:1.9; font-size:16px; padding-bottom:78px;
+}
+.wrap{max-width:720px; margin:0 auto; padding:0 22px}
+section{padding:64px 0; scroll-margin-top:60px}
+.wash{background:var(--wash)}
+.wash2{background:var(--wash2)}
+h1,h2,h3{line-height:1.4; text-wrap:balance; margin:0}
+h2{font-size:25px; font-weight:900; text-align:center; color:var(--navy); margin-bottom:10px}
+.lead{color:var(--muted); text-align:center; margin:0 0 34px; font-size:14px}
+.eyebrow{display:block; text-align:center; color:var(--sky); font-size:11px; font-weight:800; letter-spacing:.28em; margin-bottom:10px}
+.mk{background:linear-gradient(transparent 60%, var(--mk) 60%); font-weight:900; padding:0 2px}
+
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1; transform:none; transition:none}
+  .faq .a{transition:none}
+}
+
+/* ヘッダー: ロゴと相談ボタンだけ */
+.top{position:fixed; top:0; left:0; right:0; z-index:60; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); background:rgba(8,28,63,.72); border-bottom:1px solid rgba(255,255,255,.08)}
+.top-in{display:flex; justify-content:space-between; align-items:center; padding:12px 22px}
+.logo{font-weight:800; color:#fff; font-size:18px; text-decoration:none}
+.logo span{color:var(--accent)}
+.top-cta{background:var(--accent); color:var(--accent-ink); text-decoration:none; font-weight:900; font-size:13px; border-radius:999px; padding:8px 16px}
+
+/* ① ファーストビュー */
+.hero{
+  background:
+    linear-gradient(170deg, rgba(6,22,50,.86) 0%, rgba(9,34,74,.74) 55%, rgba(11,45,98,.84) 100%),
+    url('top.webp') center / cover no-repeat,
+    linear-gradient(165deg, var(--navy-deep) 0%, var(--navy) 100%);
+  color:#fff; text-align:center; padding:112px 0 60px;
+}
+.hero .for{display:inline-block; border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:4px 18px; font-size:14px; font-weight:800; letter-spacing:.04em}
+.hero h1{font-size:clamp(28px,8vw,48px); font-weight:900; margin-top:18px; line-height:1.38}
+.hero h1 .yl{color:var(--accent)}
+.hero .kv-sub{font-size:14px; color:rgba(255,255,255,.9); margin:18px 0 0}
+.hero .kind{margin:22px 0 0; font-size:13px; color:var(--hero-sub); letter-spacing:.06em}
+.hero .price-chip{display:inline-flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:4px 14px; margin:26px 0 22px; padding:12px 22px; border-radius:16px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18)}
+.price-chip b{color:var(--accent); font-size:26px; font-weight:900; font-variant-numeric:tabular-nums}
+.price-chip small{color:var(--hero-sub); font-size:11px; flex-basis:100%}
+.vs{display:flex; justify-content:center; align-items:center; gap:10px; margin:26px auto 0; max-width:430px}
+.vs div{flex:1; border-radius:14px; padding:10px 8px; line-height:1.3}
+.vs .them{background:rgba(255,255,255,.06); color:var(--hero-sub); font-size:12px}
+.vs .them s{display:block; font-size:20px; font-weight:900; color:#dfe6f2}
+.vs .us{background:var(--accent); color:var(--accent-ink); font-size:12px; font-weight:800}
+.vs .us b{display:block; font-size:30px; font-weight:900}
+.vs .arrow{flex:0 0 auto; color:var(--accent); font-size:22px; font-weight:900}
+.hero .monthly{margin:14px 0 4px; font-size:15px; font-weight:800}
+.hero .monthly b{color:var(--accent); font-size:28px; font-variant-numeric:tabular-nums}
+.hero .monthly .day{display:block; font-size:12px; font-weight:700; color:var(--hero-sub)}
+.hero .fine{display:block; font-size:11px; color:var(--hero-sub); margin-bottom:18px}
+.badges{display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin:0 0 20px}
+.badges span{border:1px solid rgba(255,255,255,.3); border-radius:999px; padding:3px 12px; font-size:12px; font-weight:700; background:rgba(255,255,255,.05)}
+.urgent{max-width:560px; margin:0 auto 26px; background:rgba(255,198,26,.12); border:1px solid rgba(255,198,26,.45); border-radius:14px; padding:14px 18px; font-size:14px; text-align:center}
+.urgent b{color:var(--accent)}
+.day-cost{margin-top:10px; text-align:center; font-size:14px; font-weight:800; color:var(--navy)}
+.day-cost b{font-size:22px}
+.free-design{max-width:640px; margin:0 auto; background:var(--card); border:2px solid var(--accent); border-radius:22px; padding:28px 22px 24px; text-align:center; box-shadow:0 14px 38px rgba(255,198,26,.2)}
+.free-design .ribbon{display:inline-block; background:var(--accent); color:var(--accent-ink); font-weight:900; font-size:13px; border-radius:999px; padding:3px 16px}
+.free-design h3{font-size:clamp(22px,6vw,28px); font-weight:900; color:var(--navy); margin:12px 0 8px}
+.free-design h3 .yl{background:linear-gradient(transparent 60%, var(--mk) 60%)}
+.free-design p{margin:0; font-size:14px}
+.fd-steps{display:flex; align-items:stretch; justify-content:center; gap:6px; margin:20px 0 16px; font-size:12px; font-weight:800}
+.fd-steps div{flex:1; border-radius:12px; padding:10px 2px; line-height:1.4}
+.fd-steps .nw{white-space:nowrap; font-size:11px}
+.fd-steps .free{background:#eaf3ea; color:var(--ok)}
+.fd-steps .judge{background:var(--navy); color:#fff}
+.fd-steps small{display:block; font-size:10px; font-weight:700; opacity:.85}
+.fd-steps .ar{flex:0 0 auto; align-self:center; color:var(--muted); padding:0}
+.free-design .fine{font-size:12px; color:var(--muted); margin-top:10px}
+.steps li.judge .t::after{content:"ここで判断できます"; margin-left:8px; background:var(--accent); color:var(--accent-ink); font-size:11px; font-weight:900; border-radius:999px; padding:2px 10px; vertical-align:2px}
+.steps .free-tag{display:inline-block; margin-left:6px; background:#eaf3ea; color:var(--ok); font-size:11px; font-weight:900; border-radius:999px; padding:2px 10px; vertical-align:2px}
+.hero .scroll{display:block; margin-top:30px; font-size:11px; letter-spacing:.3em; color:var(--hero-sub)}
+
+/* ボタン */
+.btn{display:inline-block; text-decoration:none; text-align:center; font-weight:900; border-radius:999px; padding:17px 36px; font-size:16px; border:none; cursor:pointer; font-family:inherit; transition:transform .12s, opacity .15s}
+.btn:hover{opacity:.92}
+.btn:active{transform:scale(.98)}
+.btn:focus-visible, .faq .q:focus-visible{outline:3px solid var(--sky); outline-offset:3px}
+.btn-cta{background:var(--accent); color:var(--accent-ink); box-shadow:0 10px 26px rgba(255,198,26,.35)}
+.btn-block{display:block; width:100%; max-width:430px; margin:0 auto}
+.cta-cap{text-align:center; font-size:12px; margin-top:12px; color:var(--muted)}
+.hero .cta-cap{color:var(--hero-sub)}
+.mid-cta{margin-top:36px}
+
+/* ② 共感: チェックリスト */
+.checks{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+@media(min-width:640px){ .checks{grid-template-columns:1fr 1fr} }
+.checks li{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; font-weight:700; font-size:14px; display:flex; gap:12px; align-items:center; box-shadow:var(--shadow)}
+.checks li::before{content:""; flex:0 0 20px; height:20px; border:2px solid var(--sky); border-radius:5px;
+  background:no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8.5l3.5 3.5 7.5-8' fill='none' stroke='%233f8ecf' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.checks-close{text-align:center; margin-top:28px; font-size:18px; font-weight:900; color:var(--navy)}
+
+/* ③ 問題提起: お客様が確かめる流れ */
+.journey{list-style:none; margin:0 auto; padding:0; max-width:420px; display:grid; gap:0}
+.journey li{position:relative; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 18px; display:flex; align-items:center; gap:14px; font-weight:800; color:var(--navy)}
+.journey li + li{margin-top:30px}
+.journey li + li::before{content:""; position:absolute; left:50%; top:-26px; width:2px; height:22px; background:var(--line); transform:translateX(-50%)}
+.journey li + li::after{content:""; position:absolute; left:50%; top:-10px; border:6px solid transparent; border-top-color:var(--line); transform:translateX(-50%)}
+.journey .ic{flex:0 0 40px; height:40px; border-radius:12px; background:var(--wash); display:flex; align-items:center; justify-content:center}
+.journey .ic svg{width:22px; height:22px; stroke:var(--navy); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+.journey .who{display:block; font-size:11px; color:var(--muted); font-weight:700}
+.journey li.miss{border:2px dashed var(--ng); background:#fff6f3; color:var(--ng)}
+.journey li.miss .ic{background:#fde4dc}
+.journey li.miss .ic svg{stroke:var(--ng)}
+.problem-close{max-width:520px; margin:34px auto 0; text-align:center; font-size:15px}
+.problem-close b{display:block; font-size:19px; color:var(--navy); margin-bottom:6px}
+
+/* ④ 答え: 3つの特徴 */
+.answer-lead{text-align:center; font-size:16px; font-weight:700; margin:0 0 30px}
+.points{display:grid; gap:14px; counter-reset:p}
+@media(min-width:720px){ .points{grid-template-columns:repeat(3,1fr)} }
+.point{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px 20px; box-shadow:var(--shadow)}
+.point .no{font-size:30px; font-weight:900; color:var(--accent); line-height:1; -webkit-text-stroke:1px var(--accent-ink)}
+.point .t{font-size:17px; font-weight:900; color:var(--navy); margin:10px 0 6px}
+.point p{margin:0; color:var(--muted); font-size:13px}
+
+/* ⑤ 作るもの */
+.build{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+@media(min-width:640px){ .build{grid-template-columns:repeat(4,1fr)} }
+.build li{list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 10px 14px; text-align:center; font-weight:800; font-size:13px; color:var(--navy); display:grid; justify-items:center; gap:8px}
+.build svg{width:26px; height:26px; stroke:var(--sky); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+.build-wrap{margin:0; padding:0}
+.build-note{color:var(--muted); font-size:12px; text-align:center; margin-top:14px}
+
+/* ⑥ Before / After */
+.ba{display:grid; gap:10px; max-width:640px; margin:0 auto}
+.ba-head, .ba-row{display:grid; grid-template-columns:1fr 28px 1fr; align-items:stretch; gap:8px}
+.ba-head div{font-size:12px; font-weight:900; letter-spacing:.2em; text-align:center; padding:6px 0; border-radius:8px}
+.ba-head .b{background:#e6e9ee; color:var(--muted)}
+.ba-head .a{background:var(--navy); color:#fff}
+.ba-row > div{border-radius:12px; padding:12px 12px; font-size:13px; font-weight:700; display:flex; align-items:center}
+.ba-row .b{background:var(--card); border:1px solid var(--line); color:var(--muted)}
+.ba-row .a{background:#eaf3ea; color:var(--navy); border:1px solid #cfe5d3}
+.ba-row .arr{color:var(--accent-ink); justify-content:center; font-size:18px; padding:0}
+.ba-head span{display:block}
+
+.works{display:grid; gap:16px; margin-top:40px}
+@media(min-width:640px){ .works{grid-template-columns:repeat(3,1fr)} }
+.work{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); text-decoration:none; color:inherit; display:block}
+.work .win{background:#e9eef5; padding:7px 12px; display:flex; gap:5px}
+.work .win i{width:8px; height:8px; border-radius:50%; background:#c9d3e0}
+.work img{display:block; width:100%; height:180px; object-fit:cover; object-position:top center}
+.work .wb{padding:12px 14px 14px; font-size:13px}
+.work .wb b{display:block; color:var(--navy); font-size:14px}
+.work .wb span{color:var(--sky); font-weight:800; font-size:12px}
+.works-note{color:var(--muted); font-size:12px; text-align:center; margin-top:14px}
+
+/* ⑦ 料金 */
+.zero{max-width:520px; margin:0 auto 26px; text-align:center; background:var(--navy); color:#fff; border-radius:22px; padding:24px 20px}
+.zero .l{font-size:15px; font-weight:800}
+.zero .v{font-size:64px; font-weight:900; color:var(--accent); line-height:1.1}
+.zero .v small{font-size:24px; color:#fff}
+.zero .s{font-size:12px; color:var(--hero-sub)}
+.plans{display:grid; gap:14px}
+@media(min-width:640px){ .plans{grid-template-columns:repeat(3,1fr)} }
+.plan{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 18px 22px; text-align:center; position:relative; box-shadow:var(--shadow)}
+.plan.reco{border:2px solid var(--accent)}
+.plan .tag{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--accent); color:var(--accent-ink); font-size:12px; font-weight:900; border-radius:999px; padding:3px 14px; white-space:nowrap}
+.plan .name{font-weight:900; font-size:17px; color:var(--navy)}
+.plan .cap{color:var(--muted); font-size:13px; margin:0 0 10px}
+.plan .p{font-variant-numeric:tabular-nums; line-height:1.1}
+.plan .p b{font-size:36px; font-weight:900; color:var(--navy)}
+.plan .p span{font-size:12px; color:var(--muted)}
+.plan .taxin{color:var(--muted); font-size:12px; margin-top:6px}
+.plan .fit{margin-top:12px; font-size:12px; background:var(--wash2); border-radius:10px; padding:8px 10px; text-align:left}
+.incl{margin-top:20px; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px}
+.incl p{margin:0 0 12px; text-align:center; font-weight:900; color:var(--navy)}
+.incl ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:8px}
+.incl li{background:var(--wash); color:var(--navy); font-size:12px; font-weight:800; border-radius:999px; padding:4px 12px}
+.terms{margin-top:14px; color:var(--muted); font-size:12px; text-align:center}
+
+/* ⑧ 初めてでも大丈夫 */
+.safe{background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px 22px; box-shadow:var(--shadow); max-width:640px; margin:0 auto}
+.voices{display:grid; gap:10px; margin:0 0 22px; padding:0; list-style:none}
+.voices li{align-self:start; justify-self:start; background:var(--wash); border-radius:16px 16px 16px 4px; padding:10px 16px; font-size:14px; font-weight:700}
+.voices li:nth-child(2){justify-self:end; border-radius:16px 16px 4px 16px}
+.safe .ans{font-size:15px; margin:0}
+.safe .ans b{color:var(--navy)}
+.prep{display:grid; gap:10px; margin-top:20px}
+@media(min-width:560px){ .prep{grid-template-columns:repeat(3,1fr)} }
+.prep div{border-top:3px solid var(--accent); background:var(--wash2); border-radius:0 0 12px 12px; padding:12px 14px; font-size:13px}
+.prep b{display:block; color:var(--navy); font-size:14px}
+
+/* ⑨ 流れ */
+.steps{list-style:none; counter-reset:s; margin:0 auto; padding:0; max-width:560px}
+.steps li{counter-increment:s; position:relative; padding:0 0 26px 60px}
+.steps li::before{content:counter(s, decimal-leading-zero); position:absolute; left:0; top:0; width:42px; height:42px; border-radius:50%; background:var(--navy); color:#fff; font-weight:900; font-size:14px; display:flex; align-items:center; justify-content:center}
+.steps li:first-child::before{background:var(--accent); color:var(--accent-ink)}
+.steps li:not(:last-child)::after{content:""; position:absolute; left:20px; top:46px; bottom:4px; width:2px; background:var(--line)}
+.steps .t{font-weight:900; font-size:16px; color:var(--navy); padding-top:6px}
+.steps p{margin:0; color:var(--muted); font-size:13px}
+
+/* ⑩ FAQ */
+.faq{display:grid; gap:10px; max-width:640px; margin:0 auto}
+.faq .qa{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:0 18px}
+.faq .q{cursor:pointer; font-weight:800; padding:15px 0; display:flex; gap:10px; align-items:center; font-size:14px; width:100%; text-align:left; background:none; border:none; font-family:inherit; color:inherit}
+.faq .q::before{content:"Q"; color:#fff; background:var(--sky); border-radius:50%; width:24px; height:24px; flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; font-size:13px; font-weight:900}
+.faq .qa.open .q::before{content:"A"; background:var(--navy)}
+.faq .a{display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease}
+.faq .qa.open .a{grid-template-rows:1fr}
+.faq .a-in{overflow:hidden; color:var(--muted); font-size:13px}
+.faq .qa.open .a-in{padding:0 0 16px 34px}
+
+/* ⑪ 最後のCTA＋フォーム */
+.last{background:linear-gradient(165deg, var(--navy-deep) 0%, var(--navy) 100%); color:#fff}
+.last h2{color:#fff}
+.last .lead{color:var(--hero-sub)}
+.form{display:grid; gap:14px; background:var(--card); color:var(--ink); border-radius:22px; padding:28px 22px; max-width:560px; margin:0 auto}
+.form label, .form fieldset{font-weight:800; font-size:14px; display:grid; gap:6px; color:var(--navy)}
+.form fieldset{border:none; margin:0; padding:0}
+.form legend{padding:0; margin-bottom:6px}
+.form input[type=text], .form textarea{width:100%; border:1px solid var(--line); border-radius:12px; padding:13px; font-size:16px; font-family:inherit; background:#fff; color:var(--ink)}
+.form input:focus-visible, .form textarea:focus-visible{outline:3px solid var(--sky); outline-offset:1px}
+.stage{display:flex; flex-wrap:wrap; gap:8px}
+.stage label{display:block; font-weight:700; font-size:13px; color:var(--ink)}
+.stage input{position:absolute; opacity:0}
+.stage span{display:block; border:1px solid var(--line); border-radius:999px; padding:8px 14px; cursor:pointer}
+.stage input:checked + span{background:var(--navy); color:#fff; border-color:var(--navy)}
+.stage input:focus-visible + span{outline:3px solid var(--sky); outline-offset:2px}
+.opt-tag{font-weight:700; color:var(--muted); font-size:12px}
+.form-sent{margin:8px 0; text-align:center; font-weight:800; color:var(--navy)}
+.form-err{margin:0; text-align:center; color:var(--ng); font-size:13px; font-weight:700}
+.form-privacy{margin:0; text-align:center; color:var(--muted); font-size:12px}
+.form-privacy a{color:var(--sky)}
+
+.cta-bar{position:fixed; left:0; right:0; bottom:0; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); background:rgba(255,255,255,.88); border-top:1px solid var(--line); padding:10px 14px calc(10px + env(safe-area-inset-bottom)); z-index:50}
+.cta-bar .btn{display:block; padding:13px 8px; font-size:15px}
+
+footer{background:#061430; color:#9fb4d6; padding:36px 0 44px; text-align:center; font-size:12px}
+footer .logo{display:block; margin-bottom:6px; font-size:17px}
+footer a{color:#cfe0f5}
+
+@media (min-width: 960px){
+  body{padding-bottom:0}
+  .cta-bar{display:none}
+  .wrap{max-width:1000px; padding:0 32px}
+  section{padding:92px 0}
+  h2{font-size:32px}
+  .lead{font-size:15px; margin-bottom:46px}
+  .top-in{padding:14px 32px}
+  .top-cta{font-size:14px; padding:9px 22px}
+  .hero{padding:150px 0 80px}
+  .hero .kv-sub{font-size:16px}
+  .checks{max-width:760px; margin:0 auto}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-in">
+    <a class="logo" href="#top" aria-label="ページの先頭へ">EasyWeb<span>Craft</span></a>
+    <a class="top-cta" href="#contact">無料相談</a>
+  </div>
+</div>
+
+<!-- ① ファーストビュー -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="for">これから開業する方・開業したばかりの方へ</span>
+    <h1>「ちゃんとした<br>ホームページ」を<br><span class="yl">開業時から。</span></h1>
+    <p class="kv-sub">開業したら、お客様はまず検索します。<br>そのとき「ちゃんとしたところ」に見える準備を。</p>
+    <div class="vs" aria-label="初期費用の比較">
+      <div class="them">一般的な制作会社<s>20〜50万円</s></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="us">初期費用<b>0円</b></div>
+    </div>
+    <p class="monthly">月額 <b>5,980円〜</b><span class="day">1日あたり約200円で、制作も更新もおまかせ</span></p>
+    <span class="fine">税別（税込6,578円〜）・最低契約期間6ヶ月</span>
+    <div class="badges"><span>トップページのデザイン案まで無料</span><span>開業前OK</span><span>文章づくりから</span><span>スマホ対応</span><span>公開後の更新込み</span></div>
+    <a class="btn btn-cta btn-block" href="#contact">無料相談はこちら</a>
+    <p class="cta-cap">トップページのデザイン案を見てから決められます。しつこい営業はいたしません。</p>
+    <span class="scroll" aria-hidden="true">↓ SCROLL</span>
+  </div>
+</header>
+
+<main>
+<!-- ② 共感 -->
+<section class="wash">
+  <div class="wrap reveal">
+    <span class="eyebrow">CHECK</span>
+    <h2>開業したけど……</h2>
+    <p class="lead">こんなこと、思っていませんか？</p>
+    <ul class="checks">
+      <li>ホームページをまだ作っていない</li>
+      <li>何を載せればいいかわからない</li>
+      <li>制作会社に頼むと高そう</li>
+      <li>Instagramだけで大丈夫か不安</li>
+      <li>写真や文章をどう準備するかわからない</li>
+      <li>開業までに間に合うか心配</li>
+    </ul>
+    <p class="checks-close">その悩み、<span class="mk">まとめて任せてください。</span><br>開業する人のために作ったサービスです。</p>
+  </div>
+</section>
+
+<!-- ③ 問題提起 -->
+<section>
+  <div class="wrap reveal">
+    <span class="eyebrow">PROBLEM</span>
+    <h2>開業したら、お客様は<br>あなたの事業を検索します</h2>
+    <p class="lead">はじめての相手ほど、会う前・行く前に確かめます。</p>
+    <ol class="journey">
+      <li><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h6"/><path d="M7 14h4"/></svg></span><span><span class="who">お客様・取引先が</span>名刺やチラシを受け取る</span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></span><span><span class="who">気になったので</span>会社名・店名を検索する</span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="16.8" cy="7.2" r=".6"/></svg></span><span><span class="who">雰囲気は</span>Instagramで見られた</span></li>
+      <li class="miss"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18"/><path d="M9.5 12.5l5 5"/><path d="M14.5 12.5l-5 5"/></svg></span><span><span class="who">料金・場所・会社のことを知りたいのに</span>ホームページがない</span></li>
+    </ol>
+    <p class="problem-close"><b>「ここ、ちゃんとしたところかな？」</b>ここで確かめられないと、あなたが知らないうちに、問い合わせの前に候補から外れてしまいます。<br><span class="mk">せっかくの開業を、見つけてもらえないまま始めないために。</span></p>
+    <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">開業前に相談しておく</a></div>
+  </div>
+</section>
+
+<!-- ④ EasyWebCraftの答え -->
+<section class="wash2">
+  <div class="wrap reveal">
+    <span class="eyebrow">SOLUTION</span>
+    <h2>EasyWebCraftなら</h2>
+    <p class="answer-lead">開業したばかりの事業に必要な情報を<br><span class="mk">一緒に整理して</span>、ホームページにします。</p>
+    <div class="points">
+      <div class="point"><div class="no">01</div><div class="t">スマホで見やすい</div><p>検索するお客様の多くはスマホから。小さな画面でも読みやすく、迷わない作りにします。</p></div>
+      <div class="point"><div class="no">02</div><div class="t">事業の内容が伝わる</div><p>何をしているか、誰に向けたサービスか、いくらか。はじめて見る人が知りたいことを、順番どおりに載せます。</p></div>
+      <div class="point"><div class="no">03</div><div class="t">問い合わせにつながる</div><p>電話・お問い合わせフォーム・LINEやInstagramへの入口を、見てすぐ行動できる場所に置きます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ 何を作ってくれる？ -->
+<section>
+  <div class="wrap reveal">
+    <span class="eyebrow">WHAT WE MAKE</span>
+    <h2>何を作ってくれるの？</h2>
+    <p class="lead">開業したての事業に、まず必要なページをそろえます。</p>
+    <ul class="build build-wrap">
+      <li><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>トップページ</li>
+      <li><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg>会社・お店の紹介</li>
+      <li><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>サービス紹介</li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M17 7.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2 2.7 5 3.5 5 1.6 5 3.5-2.2 3-5 3-5-1.1-5-3"/></svg>料金・メニュー</li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>アクセス・地図</li>
+      <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>お問い合わせフォーム</li>
+      <li><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>SNSへのリンク</li>
+      <li><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>スマホ対応</li>
+    </ul>
+    <p class="build-note">※ページ数はプランによって変わります（EasyWebHPは6ページまで）。載せる内容は無料相談で一緒に決めます。</p>
+  </div>
+</section>
+
+<!-- ⑥ Before → After -->
+<section class="wash">
+  <div class="wrap reveal">
+    <span class="eyebrow">BEFORE / AFTER</span>
+    <h2>ホームページがあると、<br>こう変わります</h2>
+    <p class="lead">Instagramだけの状態と比べると。</p>
+    <div class="ba">
+      <div class="ba-head"><div class="b">BEFORE</div><span></span><div class="a">AFTER</div></div>
+      <div class="ba-row"><div class="b">検索しても、事業の説明が出てこない</div><div class="arr" aria-hidden="true">→</div><div class="a">名前で調べた人に、事業の全体が伝わる</div></div>
+      <div class="ba-row"><div class="b">料金や営業時間が投稿に埋もれている</div><div class="arr" aria-hidden="true">→</div><div class="a">料金・場所・時間が1か所にまとまる</div></div>
+      <div class="ba-row"><div class="b">問い合わせはDMだけ</div><div class="arr" aria-hidden="true">→</div><div class="a">電話・フォームからすぐ問い合わせできる</div></div>
+      <div class="ba-row"><div class="b">取引先に会社の情報を見せられない</div><div class="arr" aria-hidden="true">→</div><div class="a">名刺にURLを載せて、会社の顔にできる</div></div>
+    </div>
+
+    <div class="works">
+      <a class="work" href="https://easywebcraft.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener">
+        <div class="win" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="img/salon.webp" alt="美容室サイト hair salon TASHI の制作イメージ" width="800" height="478" loading="lazy">
+        <div class="wb"><b>美容室</b><span>サイトを見る ↗</span></div>
+      </a>
+      <a class="work" href="https://easywebcraft.github.io/my-website/" target="_blank" rel="noopener">
+        <div class="win" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="img/dining.webp" alt="飲食店サイト Dining TASHIRO の制作イメージ" width="800" height="476" loading="lazy">
+        <div class="wb"><b>飲食店</b><span>サイトを見る ↗</span></div>
+      </a>
+      <a class="work" href="https://easywebcraft.github.io/kids-support-sample/" target="_blank" rel="noopener">
+        <div class="win" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="img/kids.webp" alt="こども支援施設サイトの制作イメージ" width="800" height="391" loading="lazy">
+        <div class="wb"><b>こども支援施設</b><span>サイトを見る ↗</span></div>
+      </a>
+    </div>
+    <p class="works-note">※いずれも当方制作のサンプルサイトです。業種に合わせてデザインします。</p>
+    <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">このくらいのサイトを相談する</a></div>
+  </div>
+</section>
+
+<!-- デザイン案まで無料 -->
+<section>
+  <div class="wrap reveal">
+    <div class="free-design">
+      <span class="ribbon">相談からトップページのデザイン案まで 0円</span>
+      <h3>デザイン案を<span class="yl">見てから</span>、<br>決めてください。</h3>
+      <p>ヒアリングをもとに、あなたの事業の<b>トップページのデザイン案</b>まで無料でお作りします。<br>実物を見て「これなら頼みたい」と思えたら、そこからご契約です。</p>
+      <div class="fd-steps">
+        <div class="free">無料相談<small>0円</small></div><span class="ar" aria-hidden="true">→</span>
+        <div class="free">ヒアリング<small>0円</small></div><span class="ar" aria-hidden="true">→</span>
+        <div class="free">トップの<br><span class="nw">デザイン案</span><small>0円</small></div><span class="ar" aria-hidden="true">→</span>
+        <div class="judge">見てから<br>判断</div>
+      </div>
+      <p class="fine">無料でお作りするのは、トップページ1ページ分のデザイン案です。<br>見て見送られても、費用は一切かかりません。</p>
+      <div class="mid-cta" style="margin-top:22px"><a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見てみる</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ 料金 -->
+<section id="plans">
+  <div class="wrap reveal">
+    <span class="eyebrow">PRICE</span>
+    <h2>料金</h2>
+    <p class="lead">開業直後の出費を増やさないよう、初期費用はいただきません。</p>
+    <div class="zero">
+      <div class="l">初期費用</div>
+      <div class="v">0<small>円</small></div>
+      <div class="s">一般的な制作会社では、制作費20〜50万円が目安です</div>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="name">EasyWebLP</div>
+        <div class="cap">1ページ</div>
+        <div class="p"><b>5,980</b><span>円/月（税別）</span></div>
+        <div class="taxin">税込 6,578円/月</div>
+        <div class="fit">まずは名刺代わりの1ページを持ちたい方に</div>
+        <div class="day-cost">1日あたり 約<b>200</b>円</div>
+      </div>
+      <div class="plan reco">
+        <span class="tag">開業時のおすすめ</span>
+        <div class="name">EasyWebHP</div>
+        <div class="cap">6ページまで</div>
+        <div class="p"><b>7,700</b><span>円/月（税別）</span></div>
+        <div class="taxin">税込 8,470円/月</div>
+        <div class="fit">紹介・サービス・料金・アクセスなどを分けて、しっかり伝えたい方に</div>
+        <div class="day-cost">1日あたり 約<b>260</b>円</div>
+      </div>
+      <div class="plan">
+        <div class="name">EasyWebHP＋</div>
+        <div class="cap">ページ数の上限なし</div>
+        <div class="p"><b>9,800</b><span>円/月（税別）</span></div>
+        <div class="taxin">税込 10,780円/月</div>
+        <div class="fit">メニューや事例が多く、ページを増やしていきたい方に</div>
+        <div class="day-cost">1日あたり 約<b>330</b>円</div>
+      </div>
+    </div>
+    <div class="incl">
+      <p>どのプランも、月額にふくまれます</p>
+      <ul>
+        <li>オリジナルデザイン</li><li>スマホ対応</li><li>お問い合わせフォーム</li><li>サーバー・保守</li><li>独自SSL</li><li>公開後の更新・修正</li><li>外部SEO対策</li>
+      </ul>
+    </div>
+    <p class="terms">※表示は税別価格です。1日あたりの金額は月額を30日で割った目安（税別）です。最低契約期間は6ヶ月です。詳しい条件は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご覧ください。</p>
+    <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">自分に合うプランを相談する</a></div>
+  </div>
+</section>
+
+<!-- ⑧ 初めてでも大丈夫 -->
+<section class="wash2">
+  <div class="wrap reveal">
+    <span class="eyebrow">FOR BEGINNERS</span>
+    <h2>ホームページの知識が<br>なくても大丈夫です</h2>
+    <p class="lead">「何もない」ところからのご相談がほとんどです。</p>
+    <div class="safe">
+      <ul class="voices">
+        <li>何を載せればいいかわからない</li>
+        <li>文章を書くのが苦手</li>
+        <li>写真がまだない</li>
+      </ul>
+      <p class="ans">そんな状態からでも、<b>必要な内容を一緒に整理します。</b>お話をうかがって、こちらで文章の下書きを作ります。</p>
+      <div class="prep">
+        <div><b>内容</b>ヒアリングで事業のことを聞き、載せる項目を決めます</div>
+        <div><b>文章</b>話した内容から、こちらで下書きします</div>
+        <div><b>写真</b>手元の写真の選び方からご相談ください</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ 制作の流れ -->
+<section>
+  <div class="wrap reveal">
+    <span class="eyebrow">FLOW</span>
+    <h2>公開までの流れ</h2>
+    <p class="lead">トップページのデザイン案をご覧いただくまでは無料。ご契約はそのあとです。</p>
+    <ol class="steps">
+      <li><div class="t">無料相談<span class="free-tag">無料</span></div><p>フォームからお申し込みください。まだ構想の段階でもかまいません。</p></li>
+      <li><div class="t">ヒアリング<span class="free-tag">無料</span></div><p>事業の内容、お客様、載せたいことをうかがいます。</p></li>
+      <li class="judge"><div class="t">構成・デザイン案のご提案<span class="free-tag">無料</span></div><p>サイト全体の構成と、トップページのデザイン案をお見せします。ご覧になってから、頼むかどうかを決めてください。</p></li>
+      <li><div class="t">ご契約・制作</div><p>ご契約のあと、文章の下書きもふくめて、こちらで作ります。</p></li>
+      <li><div class="t">確認・修正</div><p>実際の画面を見ながら確認し、気になるところを直します。</p></li>
+      <li><div class="t">公開</div><p>公開後の更新・修正も月額の中で対応します。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ⑩ FAQ -->
+<section class="wash">
+  <div class="wrap reveal">
+    <span class="eyebrow">FAQ</span>
+    <h2>よくあるご質問</h2>
+    <p class="lead">そのほかのご質問も、無料相談でどうぞ。</p>
+    <div class="faq">
+      <div class="qa"><button class="q" type="button" aria-expanded="false">本当にデザイン案まで無料ですか？</button><div class="a"><div class="a-in">はい、無料です。ヒアリングをもとにトップページのデザイン案をお作りし、ご覧いただいたうえで頼むかどうかを決めていただきます。ご契約は、そのあとからです。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">開業前でも相談できますか？</button><div class="a"><div class="a-in">できます。開業日や事業の内容がまだ固まっていない段階でも大丈夫です。開業日から逆算して進め方をご提案します。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">ホームページの知識がなくても大丈夫ですか？</button><div class="a"><div class="a-in">大丈夫です。制作も公開後の更新もこちらで行うので、難しい操作はありません。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">写真や文章がありません。</button><div class="a"><div class="a-in">相談しながら準備できます。文章はお話をもとにこちらで下書きし、写真は手元のものの選び方からご相談に乗ります。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">スマホで見やすくできますか？</button><div class="a"><div class="a-in">対応します。すべてのプランがスマホ・タブレット対応です。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">料金はいくらですか？</button><div class="a"><div class="a-in">初期費用0円、月額5,980円（税込6,578円）からです。1ページのEasyWebLP、6ページまでのEasyWebHP（月額7,700円・税込8,470円）、ページ数の上限がないEasyWebHP＋（月額9,800円・税込10,780円）があります。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">開業日に間に合いますか？</button><div class="a"><div class="a-in">内容やページ数によって変わります。無料相談で開業予定日をうかがい、間に合うかどうかと進め方をお伝えします。お早めのご相談がおすすめです。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">相談したら、契約しないといけませんか？</button><div class="a"><div class="a-in">いいえ。相談・お見積り、そしてトップページのデザイン案の作成までは無料です。デザイン案をご覧になってから決めていただけますし、見送られても費用はかかりません。しつこい営業もいたしません。</div></div></div>
+      <div class="qa"><button class="q" type="button" aria-expanded="false">契約期間はありますか？</button><div class="a"><div class="a-in">最低契約期間は6ヶ月です。解約などの詳しい条件は、ご契約前に書面でご説明します。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑪ 最後のCTA -->
+<section class="last" id="contact">
+  <div class="wrap reveal">
+    <span class="eyebrow">CONTACT</span>
+    <h2>開業前・開業直後の<br>ホームページについて<br>相談してみませんか？</h2>
+    <p class="lead">トップページのデザイン案までは無料。見てから決めてください。<br>1営業日以内にご返信します。</p>
+    <div class="urgent">ホームページは、開業日から逆算して準備します。<br><b>開業日が近い方ほど、お早めにご相談ください。</b></div>
+    <form class="form" id="cform" action="https://formspree.io/f/maqkzjek" method="POST">
+      <input type="hidden" name="_subject" value="【EasyWebCraft 開業LP】無料相談の申し込み">
+      <label>お名前
+        <input type="text" name="name" required autocomplete="name" placeholder="例：山田 太郎">
+      </label>
+      <fieldset>
+        <legend>いまの状況 <span class="opt-tag">（任意）</span></legend>
+        <div class="stage">
+          <label><input type="radio" name="stage" value="開業準備中"><span>開業準備中</span></label>
+          <label><input type="radio" name="stage" value="開業1年以内"><span>開業1年以内</span></label>
+          <label><input type="radio" name="stage" value="それ以外"><span>それ以外</span></label>
+        </div>
+      </fieldset>
+      <label>事業・お店の名前 <span class="opt-tag">（任意・未定でも可）</span>
+        <input type="text" name="shop" autocomplete="organization" placeholder="例：カフェ イージー">
+      </label>
+      <label>ご連絡先（メール または 電話）
+        <input type="text" name="contact" required placeholder="例：info@example.com / 090-0000-0000">
+      </label>
+      <label>ご相談内容 <span class="opt-tag">（任意）</span>
+        <textarea name="body" rows="4" placeholder="例：11月に開業予定。業種は整体。何を載せればいいかから相談したい。"></textarea>
+      </label>
+      <p class="form-privacy">送信いただいた内容は<a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に基づいて取り扱います。</p>
+      <button class="btn btn-cta btn-block" type="submit">無料でデザイン案を相談する</button>
+      <p class="form-err" id="form-err" hidden>送信できませんでした。お手数ですが、時間をおいて再度お試しください。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="logo">EasyWeb<span>Craft</span></span>
+  <div>運営：株式会社TAC</div>
+  <div>愛知県名古屋市守山区瀬古東1-1701 201</div>
+  <div style="margin-top:12px"><a href="privacy.html">プライバシーポリシー</a>｜<a href="tokushoho.html">特定商取引法に基づく表記</a></div>
+</footer>
+
+<div class="cta-bar"><a class="btn btn-cta" href="#contact">無料で相談する</a></div>
+
+<script>
+// FAQ: タップ（クリック）で開閉
+document.querySelectorAll('.faq .qa').forEach(function (qa) {
+  var q = qa.querySelector('.q');
+  q.addEventListener('click', function () {
+    var open = !qa.classList.contains('open');
+    qa.classList.toggle('open', open);
+    q.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
+// スクロールでふわっと表示（reduced-motionはCSS側で無効化済み）
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: .12 });
+  els.forEach(function (e) { io.observe(e); });
+})();
+// 追従CTAバー: フォームが見えている間は隠す（ボタンが二重に並ばないように）
+(function () {
+  var bar = document.querySelector('.cta-bar');
+  var contact = document.getElementById('contact');
+  if (!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (entries) {
+    bar.hidden = entries[0].isIntersecting;
+  }, { threshold: .05 }).observe(contact);
+})();
+// フォーム送信 → Formspree へAJAX送信（JS無効時は通常のPOSTにフォールバック）
+document.getElementById('cform').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target;
+  var btn = f.querySelector('button[type="submit"]');
+  var err = document.getElementById('form-err');
+  err.hidden = true;
+  btn.disabled = true;
+  btn.textContent = '送信中…';
+  fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
+    .then(function (res) {
+      if (!res.ok) throw new Error('send failed');
+      f.innerHTML = '<p class="form-sent">送信しました。ありがとうございます。<br>1営業日以内にご連絡いたします。</p>';
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = '無料でデザイン案を相談する';
+      err.hidden = false;
+    });
+});
+</script>
+</body>
+</html>
