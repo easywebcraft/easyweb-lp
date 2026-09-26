@@ -87,9 +87,11 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 /* FV: 誰向け→何を無料で→いくら→CTA。重要な言葉の前後は余白を広めにとる */
 .hero .for{margin:0; font-size:18px; font-weight:700; letter-spacing:.04em}
 .hero h1{margin:26px 0 0; font-size:clamp(32px,9.4vw,38px); font-weight:900; line-height:1.34; letter-spacing:.01em}
-.hero h1 em{font-style:normal; color:var(--accent); font-size:clamp(40px,11.5vw,44px); margin-right:.04em}
+.hero h1 em{font-style:normal; color:var(--accent)}
+.fv-free{margin:26px 0 0; font-size:19px; font-weight:800; line-height:1.5}
+.fv-free b{color:var(--accent); font-size:32px; font-weight:900; margin-right:2px}
 .hero .kind{margin:22px 0 0; font-size:15px; font-weight:400; color:rgba(255,255,255,.88); line-height:1.8}
-.fv-price{margin:40px 0 0}
+.fv-price{margin:34px 0 0}
 .fv-price p{margin:0}
 .fv-price .lbl{font-size:16px; font-weight:700; color:var(--hero-sub); letter-spacing:.1em}
 .fv-price .zero{font-size:30px; font-weight:900; line-height:1; margin:6px 0 16px}
@@ -332,7 +334,6 @@ footer a{color:#cfe0f5}
   .top-cta{font-size:14px; padding:9px 22px}
   .hero{padding:150px 0 80px}
   .hero h1{font-size:48px}
-  .hero h1 em{font-size:56px}
     .checks{max-width:760px; margin:0 auto}
 }
 /* ロゴ画像（白＋黄の文字ロゴ。ヘッダーは文字だけの版、フッターはサブタイトル付き） */
@@ -356,8 +357,9 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
 <header class="hero" id="top">
   <div class="wrap">
     <p class="for">これから開業する方へ。</p>
-    <h1>ホームページの<br>デザイン案を<br><em>無料</em>で作ります。</h1>
+    <h1>ホームページ、<br><em>開業前に</em><br class="sp">用意しませんか？</h1>
     <p class="kind">開業・起業したばかりの<br class="sp">事業者向けホームページ制作</p>
+    <p class="fv-free">トップページのデザイン案まで<br class="sp"><b>無料</b>でお作りします</p>
     <div class="fv-price">
       <p class="lbl">初期費用</p>
       <p class="zero"><span class="num">0</span>円</p>
