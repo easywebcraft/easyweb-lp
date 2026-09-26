@@ -120,12 +120,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .mid-cta{margin-top:36px}
 
 /* ② 共感: チェックリスト */
-.checks{list-style:none; margin:0; padding:0; display:grid; gap:10px}
-@media(min-width:640px){ .checks{grid-template-columns:1fr 1fr} }
-.checks li{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; font-weight:700; font-size:14px; display:flex; gap:12px; align-items:center; box-shadow:var(--shadow)}
-.checks li::before{content:""; flex:0 0 20px; height:20px; border:2px solid var(--sky); border-radius:5px;
   background:no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8.5l3.5 3.5 7.5-8' fill='none' stroke='%233f8ecf' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
-.checks-close{text-align:center; margin-top:28px; font-size:18px; font-weight:800; color:var(--navy)}
 
 
 
@@ -298,7 +293,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .free-def3 .num{font-size:24px}
 .form-before b{display:block; font-size:14px; margin-bottom:2px}
 /* 開業したばかりの具体例 */
-.just-h{margin:44px 0 16px; text-align:center; font-size:19px; font-weight:800; color:var(--navy); line-height:1.5}
+.checks-close{text-align:center; margin-top:28px; font-size:18px; font-weight:800; color:var(--navy)}
 .just{list-style:none; margin:0 auto; padding:0; max-width:640px; display:grid; gap:10px; counter-reset:j}
 .just li{counter-increment:j; position:relative; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 16px 12px 58px; font-size:13px; color:var(--muted); box-shadow:var(--shadow)}
 .just li::before{content:counter(j); position:absolute; left:16px; top:50%; transform:translateY(-50%); width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-family:var(--num); font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center}
@@ -420,7 +415,6 @@ footer a{color:#cfe0f5}
   .hero{padding:150px 0 80px}
   .hero h1 em{font-size:56px}
   .hero h1{font-size:48px}
-    .checks{max-width:760px; margin:0 auto}
 }
 /* ロゴ画像（白＋黄の文字ロゴ。ヘッダーは文字だけの版、フッターはサブタイトル付き） */
 .logo img{display:block; height:18px; width:auto}
@@ -463,16 +457,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   <div class="wrap reveal">
     <span class="eyebrow">CHECK</span>
     <h2>開業したけど……</h2>
-    <p class="lead">こんなこと、思っていませんか？</p>
-    <ul class="checks">
-      <li>ホームページがない</li>
-      <li>何を載せればいいかわからない</li>
-      <li>文章が書けない</li>
-      <li>写真がない</li>
-      <li>制作費が心配</li>
-      <li>Instagramだけで大丈夫か不安</li>
-    </ul>
-    <h3 class="just-h">開業したばかりで、<br class="sp">こんな状態になっていませんか？</h3>
+    <p class="lead">こんな状態になっていませんか？</p>
     <ol class="just">
       <li><b>HPがまだない</b>とりあえずInstagramだけで営業している</li>
       <li><b>名刺を作った</b>でもURLを載せる場所がない</li>
