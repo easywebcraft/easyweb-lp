@@ -103,7 +103,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .fv-price .zero .num{font-size:clamp(56px,16vw,64px); font-weight:900; color:var(--accent); margin-right:2px; text-shadow:0 6px 26px rgba(255,198,26,.3)}
 .fv-price .mon{font-size:17px; font-weight:800}
 .fv-price .mon .num{font-size:clamp(24px,7vw,28px); font-weight:900; margin:0 2px}
-.fv-note{font-size:12px; color:var(--hero-sub); margin:6px 0 28px !important}
+.fv-note{font-size:11px; color:var(--hero-sub); opacity:.8; margin:8px 0 28px !important}
 .fv-cap{margin:16px 0 0; font-size:14px; font-weight:700; color:#fff}
 .fv-cap span{margin:0 6px; opacity:.6}
 
@@ -249,6 +249,9 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .scene{list-style:none; margin:18px auto 0; padding:0; max-width:320px; display:grid; gap:18px}
 .scene li{position:relative; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:8px 14px; text-align:center; font-weight:700; color:var(--navy)}
 .scene li + li::before{content:"↓"; position:absolute; top:-19px; left:50%; transform:translateX(-50%); color:var(--muted); font-weight:400}
+.scene li i{font-style:normal; display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:var(--navy); color:#fff; font-family:var(--num); font-weight:800; font-size:13px; margin-right:8px; vertical-align:1px}
+.scene li.q{border:2px dashed var(--ng); color:var(--ng); background:#fff6f3}
+.scene li.q i{background:var(--ng)}
 .scene li.hp{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:800; font-size:17px}
 /* 制作事例: PC＋スマホの完成形を大きく */
 .cases{display:grid; gap:34px; margin-top:28px}
@@ -446,7 +449,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <p class="lbl">初期費用</p>
       <p class="zero"><span class="num">0</span>円</p>
       <p class="mon">月額<span class="num">5,980</span>円～</p>
-      <p class="fv-note">最低契約期間6ヶ月・税別（税込6,578円～）</p>
+      <p class="fv-note">※最低契約期間6ヶ月・税別（税込6,578円～）</p>
     </div>
     <a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a>
     <p class="fv-cap">開業前OK<span aria-hidden="true">｜</span>見てから契約OK<span aria-hidden="true">｜</span>1営業日以内に返信</p>
@@ -485,13 +488,13 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
 <section>
   <div class="wrap reveal">
     <span class="eyebrow">WHY</span>
-    <h2>開業後、<br>こんな場面があります</h2>
+    <h2>開業すると、<br>こんなことが起こります</h2>
     <ol class="scene">
-      <li>名刺を渡す</li>
-      <li>SNSを見てもらう</li>
-      <li>店名・会社名を検索される</li>
-      <li>「どんな事業？」</li>
-      <li class="hp">ホームページ</li>
+      <li><i>1</i>名刺を渡す</li>
+      <li><i>2</i>Instagramを見てもらう</li>
+      <li><i>3</i>店名・会社名を検索される</li>
+      <li class="q"><i>4</i>「公式サイトはないの？」</li>
+      <li class="hp">そこでホームページ</li>
     </ol>
   </div>
 </section>
