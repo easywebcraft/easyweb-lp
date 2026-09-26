@@ -213,15 +213,18 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .offer .fine{font-size:12px; color:var(--muted); margin:12px 0 0}
 
 /* ⑦ 料金 */
-.price-top{text-align:center; margin:0 0 30px}
-.price-top .z{font-size:15px; font-weight:700; color:var(--navy)}
-.price-top .min{display:inline-block; margin-left:12px; font-size:13px; font-weight:700; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:2px 12px; vertical-align:6px}
+.price-top{display:flex; justify-content:center; align-items:flex-end; gap:14px; margin:0 0 30px; text-align:center}
+.price-top p{margin:0; display:flex; flex-direction:column; align-items:center; line-height:1.2}
+.price-top span{font-size:13px; font-weight:700; color:var(--muted)}
+.price-top .z b{font-size:22px; color:var(--navy); font-weight:800}
+.price-top .z .num{font-size:60px; font-weight:900; margin-right:2px}
+.price-top .min{border-left:1px solid var(--line); padding-left:14px; padding-bottom:8px}
+.price-top .min b{font-size:22px; color:var(--navy); font-weight:800; margin-top:4px}
 .choose{list-style:none; margin:0 auto 34px; padding:0; max-width:560px; display:grid; gap:8px}
 .choose li{display:flex; flex-wrap:wrap; align-items:center; gap:4px 12px; background:var(--wash2); border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:13px}
 .choose b{color:var(--navy); font-size:14px; min-width:7.5em}
 .choose li.reco{background:#fffbea; border:2px solid var(--accent)}
 .choose em{font-style:normal; margin-left:auto; background:var(--accent); color:var(--accent-ink); font-size:11px; font-weight:700; border-radius:999px; padding:2px 10px}
-.price-top .z b{font-size:44px; color:var(--navy); margin:0 4px}
 @media(max-width:639px){ .plan.reco{order:-1} }
 .plan .side{font-size:12px; font-weight:700; color:var(--sky); margin-bottom:4px}
 
@@ -236,15 +239,16 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .why li{background:var(--wash); border-radius:12px; padding:10px 6px; text-align:center; font-size:13px; font-weight:700; color:var(--navy)}
 
 /* 短くした WHY */
-.scene{list-style:none; margin:10px auto 0; padding:0; max-width:340px; display:grid; gap:22px}
-.scene li{position:relative; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 14px; text-align:center; font-weight:700; color:var(--navy)}
-.scene li + li::before{content:"↓"; position:absolute; top:-21px; left:50%; transform:translateX(-50%); color:var(--muted); font-weight:400}
+.scene{list-style:none; margin:18px auto 0; padding:0; max-width:320px; display:grid; gap:18px}
+.scene li{position:relative; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:8px 14px; text-align:center; font-weight:700; color:var(--navy)}
+.scene li + li::before{content:"↓"; position:absolute; top:-19px; left:50%; transform:translateX(-50%); color:var(--muted); font-weight:400}
 .scene li.hp{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:800; font-size:17px}
 /* 制作事例: PC＋スマホの完成形を大きく */
-.cases{display:grid; grid-auto-flow:column; grid-auto-columns:88%; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 4px 14px; margin:0 -4px}
-@media(min-width:760px){ .cases{grid-auto-flow:row; grid-template-columns:repeat(3,1fr); overflow:visible} }
-.case{scroll-snap-align:center; text-decoration:none; color:inherit; text-align:center}
+.cases{display:grid; gap:34px; margin-top:28px}
+@media(min-width:760px){ .cases{grid-template-columns:repeat(3,1fr); gap:24px} }
+.case{text-decoration:none; color:inherit; text-align:center}
 .case .mock{margin:0 0 18px}
+.cases-note{text-align:center; margin:30px 0 0; font-size:16px; font-weight:800; color:var(--navy)}
 .case b{display:block; font-size:16px; color:var(--navy)}
 .case span{font-size:12px; color:var(--sky); font-weight:700}
 /* 無料デザイン案 */
@@ -409,7 +413,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
     <p class="for">これから開業する方へ</p>
     <h1>ホームページの<br>デザイン案を<br><em>無料</em>で作ります。</h1>
     <p class="kind">「何を載せればいいかわからない」<br>そんな状態からOK。</p>
-    <p class="fv-sub2">ホームページ、開業前に用意しませんか？</p>
+    <p class="fv-sub2">開業前・何も決まっていない状態からOK。</p>
     <div class="fv-price">
       <p class="lbl">初期費用</p>
       <p class="zero"><span class="num">0</span>円</p>
@@ -445,7 +449,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
 <section>
   <div class="wrap reveal">
     <span class="eyebrow">WHY</span>
-    <h2>開業すると、<br>こんな場面があります</h2>
+    <h2>開業後、<br>こんな場面があります</h2>
     <ol class="scene">
       <li>名刺を渡す</li>
       <li>SNSを見てもらう</li>
@@ -475,7 +479,6 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   <div class="wrap reveal">
     <span class="eyebrow">WORKS</span>
     <h2>あなたの事業なら、<br>こんなHPになります。</h2>
-    <p class="lead">美容室・飲食店・こども支援施設。業種に合わせてデザインします。</p>
     <div class="cases">
       <a class="case" href="https://k-matsumoto527.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener">
         <div class="mock"><div class="pc"><img src="img/salon.webp" alt="美容室サイト hair salon TASHI のPC画面" width="800" height="478" loading="lazy"></div><div class="phone"><img src="img/m-salon.webp" alt="美容室サイトのスマホ画面" width="390" height="844" loading="lazy"></div></div>
@@ -490,7 +493,8 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
         <b>こども支援</b><span>サイトを見る ↗</span>
       </a>
     </div>
-    <p class="shots-note">※いずれも当方制作のサンプルサイトです。スマホでは横にスクロールできます。</p>
+    <p class="cases-note">業種に合わせてデザインします。</p>
+    <p class="shots-note">※いずれも当方制作のサンプルサイトです。</p>
 
     <div class="ba-img">
       <figure class="before">
@@ -547,7 +551,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   <div class="wrap reveal">
     <span class="eyebrow">PRICE</span>
     <h2>料金</h2>
-    <p class="price-top"><span class="z">初期費用<b class="num">0</b>円</span><span class="min">最低契約期間6ヶ月</span></p>
+    <div class="price-top"><p class="z"><span>初期費用</span><b><span class="num">0</span>円</b></p><p class="min"><span>最低契約期間</span><b>6ヶ月</b></p></div>
     <div class="plan reco feature">
       <span class="tag">開業時のおすすめ</span>
       <div class="name">EasyWebHP</div>
