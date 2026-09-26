@@ -10,7 +10,7 @@
 <!-- OGP（LINE・SNSでURLを共有したときのプレビュー用） -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EasyWebCraft">
-<meta property="og:title" content="これから開業する方へ。ホームページ、開業前に用意しませんか？">
+<meta property="og:title" content="これから開業する方へ。ホームページのデザイン案を無料で作ります。">
 <meta property="og:description" content="トップページのデザイン案までは無料、見てから決められます。初期費用0円・月額5,980円〜。開業前のご相談も無料です。">
 <meta property="og:url" content="https://easywebcraft.github.io/easyweb-lp/kaigyo.html">
 <meta property="og:image" content="https://easywebcraft.github.io/easyweb-lp/ogp.png">
@@ -22,8 +22,8 @@
 <link rel="preload" as="image" href="top.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Noto+Sans+JP:wght@400;700;800;900&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Noto+Sans+JP:wght@400;700;800;900&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;800;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;800;900&display=swap"></noscript>
 <style>
 /* 開業者向けの広告LP。色は本体LP（index.html）と揃える。行動は「無料相談」だけに絞るのでナビは置かない */
 :root{
@@ -87,21 +87,18 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 /* FV: 誰向け→何を無料で→いくら→CTA。重要な言葉の前後は余白を広めにとる */
 .hero .for{margin:0; font-size:18px; font-weight:700; letter-spacing:.04em}
 .hero h1{margin:26px 0 0; font-size:clamp(32px,9.4vw,38px); font-weight:900; line-height:1.34; letter-spacing:.01em}
-.hero h1 em{font-style:normal; color:var(--accent)}
-.fv-free{margin:26px 0 0; font-size:19px; font-weight:800; line-height:1.5}
-.fv-free b{color:var(--accent); font-size:32px; font-weight:900; margin-right:2px}
+.hero h1 em{font-style:normal; color:var(--accent); font-size:clamp(40px,11.5vw,44px); margin-right:.04em}
 .hero .kind{margin:22px 0 0; font-size:15px; font-weight:400; color:rgba(255,255,255,.88); line-height:1.8}
-.fv-price{margin:34px 0 0}
+.fv-price{margin:36px 0 0}
 .fv-price p{margin:0}
 .fv-price .lbl{font-size:16px; font-weight:700; color:var(--hero-sub); letter-spacing:.1em}
 .fv-price .zero{font-size:30px; font-weight:900; line-height:1; margin:6px 0 16px}
-.fv-price .zero .num{font-size:clamp(56px,16vw,64px); font-weight:800; color:var(--accent); margin-right:2px; text-shadow:0 6px 26px rgba(255,198,26,.3)}
+.fv-price .zero .num{font-size:clamp(56px,16vw,64px); font-weight:900; color:var(--accent); margin-right:2px; text-shadow:0 6px 26px rgba(255,198,26,.3)}
 .fv-price .mon{font-size:17px; font-weight:800}
-.fv-price .mon .num{font-size:clamp(24px,7vw,28px); margin:0 2px}
+.fv-price .mon .num{font-size:clamp(24px,7vw,28px); font-weight:900; margin:0 2px}
 .fv-note{font-size:12px; color:var(--hero-sub); margin:6px 0 28px !important}
 .fv-cap{margin:14px 0 0; font-size:12px; font-weight:700; color:var(--hero-sub)}
 .fv-cap span{margin:0 6px; opacity:.6}
-.hero .scroll{display:block; margin-top:30px; font-size:11px; letter-spacing:.3em; color:var(--hero-sub)}
 
 /* ボタン */
 .btn{display:inline-block; text-decoration:none; text-align:center; font-weight:700; border-radius:999px; padding:17px 36px; font-size:18px; border:none; cursor:pointer; font-family:inherit; transition:transform .12s, opacity .15s}
@@ -163,7 +160,9 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .mock-ttl{font-size:16px; font-weight:800; color:var(--navy); margin:30px 0 0}
 
 /* ⑦ おすすめプランを大きく */
-.plan.reco{background:#fffdf3}
+.plan.reco{background:#fffbea; box-shadow:0 18px 40px rgba(255,198,26,.28)}
+.plan.reco .name{font-size:20px}
+.plan.reco .fit{background:#fff; font-weight:700; text-align:center}
 .plan.reco .p b{font-size:44px}
 @media(min-width:640px){ .plans{align-items:center} .plan.reco{padding:36px 20px 30px; transform:scale(1.06); z-index:1} }
 
@@ -207,6 +206,8 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .offer-flow li{position:relative; display:flex; justify-content:space-between; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 18px; font-weight:700; color:var(--navy)}
 .offer-flow li b{color:var(--ok); font-size:20px; font-variant-numeric:tabular-nums}
 .offer-flow li + li::before{content:"↓"; position:absolute; top:-21px; left:50%; transform:translateX(-50%); color:var(--muted); font-size:14px}
+.offer-flow li.see{justify-content:center; gap:10px; background:#fffbea; border:2px solid var(--accent); font-size:17px}
+.offer-flow li.see svg{width:24px; height:24px; stroke:var(--navy); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
 .offer-flow li.last{background:var(--navy); color:#fff; border-color:var(--navy); justify-content:center; font-size:17px}
 .offer .ok{margin:24px auto 0; max-width:460px; background:#eaf3ea; color:var(--ok); border-radius:12px; padding:10px 14px; font-weight:700; font-size:14px}
 .offer .fine{font-size:12px; color:var(--muted); margin:12px 0 0}
@@ -250,7 +251,7 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 .plans{display:grid; gap:14px}
 @media(min-width:640px){ .plans{grid-template-columns:repeat(3,1fr)} }
 .plan{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 18px 22px; text-align:center; position:relative; box-shadow:var(--shadow)}
-.plan.reco{border:2px solid var(--accent)}
+.plan.reco{border:3px solid var(--accent)}
 .plan .tag{position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--accent); color:var(--accent-ink); font-size:12px; font-weight:700; border-radius:999px; padding:3px 14px; white-space:nowrap}
 .plan .name{font-weight:800; font-size:17px; color:var(--navy)}
 .plan .cap{color:var(--muted); font-size:13px; margin:0 0 10px}
@@ -333,6 +334,7 @@ footer a{color:#cfe0f5}
   .top-in{padding:14px 32px}
   .top-cta{font-size:14px; padding:9px 22px}
   .hero{padding:150px 0 80px}
+  .hero h1 em{font-size:56px}
   .hero h1{font-size:48px}
     .checks{max-width:760px; margin:0 auto}
 }
@@ -356,10 +358,9 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
 <!-- ① ファーストビュー -->
 <header class="hero" id="top">
   <div class="wrap">
-    <p class="for">これから開業する方へ。</p>
-    <h1>ホームページ、<br><em>開業前に</em><br class="sp">用意しませんか？</h1>
-    <p class="kind">開業・起業したばかりの<br class="sp">事業者向けホームページ制作</p>
-    <p class="fv-free">トップページのデザイン案まで<br class="sp"><b>無料</b>でお作りします</p>
+    <p class="for">これから開業する方へ</p>
+    <h1>ホームページの<br>デザイン案を<br><em>無料</em>で作ります。</h1>
+    <p class="kind">「何を載せればいいかわからない」<br>そんな状態からご相談ください。</p>
     <div class="fv-price">
       <p class="lbl">初期費用</p>
       <p class="zero"><span class="num">0</span>円</p>
@@ -367,8 +368,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <p class="fv-note">最低契約期間6ヶ月・税別（税込6,578円～）</p>
     </div>
     <a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a>
-    <p class="fv-cap">開業前OK<span aria-hidden="true">｜</span>見てから契約OK<span aria-hidden="true">｜</span>1営業日以内に返信</p>
-    <span class="scroll" aria-hidden="true">↓ SCROLL</span>
+    <p class="fv-cap">開業前OK<span aria-hidden="true">｜</span>見てから契約OK<span aria-hidden="true">｜</span>しつこい営業なし</p>
   </div>
 </header>
 
@@ -405,7 +405,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
     </ul>
     <p class="seen-to" aria-hidden="true">↓</p>
     <p class="seen-hp">「もっと詳しく知りたい」<br>→ ホームページを見る</p>
-    <p class="seen-close">「ここ、どんな会社・お店なんだろう？」<br>と思ったときに、<span class="mk">確認できる場所</span>があると安心です。</p>
+    <p class="seen-close">「ここ、どんな会社・お店なんだろう？」<br>そんなとき、<span class="mk">事業内容を確認できるホームページ</span>があると安心です。</p>
     <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a></div>
   </div>
 </section>
@@ -471,7 +471,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
     <div class="pages">
       <div class="phone"><img src="img/m-dining.webp" alt="飲食店のサンプルサイトをスマホで見た画面" width="390" height="844" loading="lazy"></div>
       <div>
-        <h3>こんなページを<br>作ります</h3>
+        <h3>こんなホームページに<br>なります</h3>
         <ul><li>トップ</li><li>お店・会社の紹介</li><li>サービス・メニュー</li><li>料金</li><li>アクセス</li><li>お問い合わせ</li></ul>
         <p class="note">ページ数はプランによります（EasyWebHPは6ページまで）。</p>
       </div>
@@ -497,7 +497,8 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
         <li>相談<b><span class="num">0</span>円</b></li>
         <li>ヒアリング<b><span class="num">0</span>円</b></li>
         <li>デザイン案<b><span class="num">0</span>円</b></li>
-        <li class="last">見てから決める</li>
+        <li class="see"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>実物を見る</li>
+        <li class="last">契約するか判断</li>
       </ol>
       <p class="ok">「ホームページを作るか迷っている」段階でもOKです。</p>
       <p class="fine">無料でお作りするのは、トップページ1ページ分のデザイン案です。見て見送られても、費用は一切かかりません。</p>
@@ -533,7 +534,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
         <div class="cap">6ページまで</div>
         <div class="p"><b class="num">7,700</b><span>円/月（税別）</span></div>
         <div class="taxin">税込 8,470円/月</div>
-        <div class="fit">紹介・サービス・料金・アクセスなど、開業時に必要なページがそろいます</div>
+        <div class="fit">会社・サービス・料金・アクセスまで<br>しっかり伝えたい方に</div>
       </div>
       <div class="plan">
         <div class="side">ページをどんどん増やしたい</div>
