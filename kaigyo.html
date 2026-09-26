@@ -273,6 +273,16 @@ h2{font-size:25px; font-weight:800; text-align:center; color:var(--navy); margin
 /* 最後 */
 .last h2.last-h{font-size:clamp(28px,8vw,36px); font-weight:900}
 .form-before{margin:0; text-align:center; font-size:13px; font-weight:700; color:var(--navy); background:var(--wash); border-radius:10px; padding:10px}
+.fv-sub2{margin:10px 0 0; font-size:14px; font-weight:700; color:var(--hero-sub)}
+.fv-zero{list-style:none; margin:18px auto 0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:8px}
+.fv-zero li{border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.06); border-radius:999px; padding:4px 14px; font-size:13px; font-weight:700}
+.fv-zero b{color:var(--accent); margin-left:4px; font-weight:800}
+.mock-lead{margin:14px 0 0; font-size:16px; font-weight:800; color:var(--navy)}
+.free-def3{list-style:none; margin:24px auto 0; padding:0; max-width:520px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+.free-def3 li{background:#eaf3ea; color:var(--ok); border-radius:12px; padding:10px 4px; font-size:15px; font-weight:800; line-height:1.35; display:flex; flex-direction:column; justify-content:center}
+.free-def3 small{display:block; font-size:11px; font-weight:700; color:var(--muted); margin-bottom:2px}
+.free-def3 .num{font-size:24px}
+.form-before b{display:block; font-size:14px; margin-bottom:2px}
 /* ④ 答え: 3つの特徴 */
 .answer-lead{text-align:center; font-size:16px; font-weight:700; margin:0 0 30px}
 .points{display:grid; gap:14px; counter-reset:p}
@@ -398,7 +408,8 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
   <div class="wrap">
     <p class="for">これから開業する方へ</p>
     <h1>ホームページの<br>デザイン案を<br><em>無料</em>で作ります。</h1>
-    <p class="kind">開業前・何も決まっていない状態からOK</p>
+    <p class="kind">「何を載せればいいかわからない」<br>そんな状態からOK。</p>
+    <p class="fv-sub2">ホームページ、開業前に用意しませんか？</p>
     <div class="fv-price">
       <p class="lbl">初期費用</p>
       <p class="zero"><span class="num">0</span>円</p>
@@ -407,6 +418,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
     </div>
     <a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a>
     <p class="fv-cap">開業前OK<span aria-hidden="true">｜</span>見てから契約OK<span aria-hidden="true">｜</span>1営業日以内に返信</p>
+    <ul class="fv-zero"><li>相談<b><span class="num">0</span>円</b></li><li>デザイン案<b><span class="num">0</span>円</b></li><li>見てから契約</li></ul>
   </div>
 </header>
 
@@ -497,7 +509,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <figure class="after">
         <div class="phone"><img src="img/m-salon.webp" alt="美容室のサンプルサイトをスマホで見た画面" width="390" height="844" loading="lazy"></div>
         <figcaption>AFTER<br>公式サイトあり</figcaption>
-        <div class="after-list"><span>料金</span><span>営業時間</span><span>アクセス</span><span>サービス</span><span>問い合わせ</span></div>
+        <div class="after-list"><span>サービス</span><span>料金</span><span>営業時間</span><span>アクセス</span><span>お問い合わせ</span></div>
       </figure>
     </div>
     <p class="ba-msg">「SNSだけ」から<br><span class="mk">「公式サイトがある状態」</span>へ。</p>
@@ -517,13 +529,14 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
         <div class="phone"><img src="img/m-dining.webp" alt="デザイン案の例（スマホ版）" width="390" height="844" loading="lazy"></div>
       </div>
       <p class="mock-cap">※掲載画像は制作例です（架空のお店で作成）</p>
+      <p class="mock-lead">このレベルのデザイン案を、<br class="sp">無料で見られます。</p>
       <ol class="flow4">
         <li>相談<small><span class="num">0</span>円</small></li>
         <li>ヒアリング<small><span class="num">0</span>円</small></li>
         <li>デザイン案<small><span class="num">0</span>円</small></li>
         <li class="judge">見てから<br>判断</li>
       </ol>
-      <p class="free-def"><b>トップページ1ページ分の<br class="sp">デザイン案を無料で作成</b><b>見送っても費用は<span class="num">0</span>円</b></p>
+      <ul class="free-def3"><li><small>無料で作るのは</small>トップページ<br>1ページ分</li><li><small>デザイン案</small><span><span class="num">0</span>円</span></li><li><small>見送っても</small><span><span class="num">0</span>円</span></li></ul>
       <div class="mid-cta"><a class="btn btn-cta btn-block" href="#contact">無料でデザイン案を見る</a></div>
     </div>
   </div>
@@ -561,7 +574,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
 <section>
   <div class="wrap reveal">
     <span class="eyebrow">FOR BEGINNERS</span>
-    <h2>HPを作りたいけど、<br>何から始めればいい？</h2>
+    <h2>HPを作りたい。<br>でも何から始めればいい？</h2>
     <p class="lead">そこから一緒に整理します。</p>
     <div class="safe">
       <ul class="voices">
@@ -652,7 +665,7 @@ footer .logo img{height:auto; width:220px; max-width:70vw; margin:0 auto}
       <label>ご相談内容 <span class="opt-tag">（任意）</span>
         <textarea name="body" rows="4" placeholder="例：11月に開業予定。業種は整体。何を載せればいいかから相談したい。"></textarea>
       </label>
-      <p class="form-before">送信後、1営業日以内にご連絡します。<br>トップページのデザイン案についてご相談します。</p>
+      <p class="form-before"><b>送信後、1営業日以内にご返信します。</b>デザイン案を見るだけでもOKです。<br>契約はデザイン案をご覧いただいた後です。</p>
       <p class="form-privacy">送信いただいた内容は<a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に基づいて取り扱います。</p>
       <button class="btn btn-cta btn-block" type="submit">無料でデザイン案を見る</button>
       <p class="form-err" id="form-err" hidden>送信できませんでした。お手数ですが、時間をおいて再度お試しください。</p>
