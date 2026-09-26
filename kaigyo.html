@@ -21,14 +21,19 @@
 <meta name="twitter:image" content="https://easywebcraft.github.io/easyweb-lp/ogp-kaigyo.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d3a7d'/><text x='50' y='72' font-size='62' font-weight='bold' text-anchor='middle' font-family='sans-serif' fill='%23ffc61a'>E</text></svg>">
 <link rel="preload" as="image" href="top.webp" fetchpriority="high">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;800;900&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Noto+Sans+JP:wght@400;700;800;900&display=swap"></noscript>
+<!-- フォントはこのLPで使う文字だけを抜き出したものをサイト内に置き、最初に先読みする。
+     Google Fonts を後から読み込むと、開いた直後に端末のフォント→Noto Sans JP へ切り替わって画面が動いていた。
+     作り方: ~/ewc-ads/fonts/font-subset.mjs（本文の文言を変えたら作り直す） -->
+<link rel="preload" href="fonts/noto-kaigyo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/mont-num.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* 1ファイルに 400〜900 の太さが入った可変フォント。先読みしているので通常は最初の表示に間に合う。
+   fallback: 約0.1秒は文字を出さずに待ち、遅れても3秒以内なら切り替え、それ以降は端末のフォントのまま */
+@font-face{font-family:"Noto Sans JP"; src:url("fonts/noto-kaigyo.woff2") format("woff2"); font-weight:400 900; font-style:normal; font-display:fallback}
+@font-face{font-family:"EWC Num"; src:url("fonts/mont-num.woff2") format("woff2"); font-weight:800 900; font-style:normal; font-display:fallback; unicode-range:U+0030-0039,U+002C,U+002E}
 /* 開業者向けの広告LP。色は本体LP（index.html）と揃える。行動は「無料相談」だけに絞るのでナビは置かない */
 :root{
-  --num:"Montserrat","Noto Sans JP",sans-serif;
+  --num:"EWC Num","Noto Sans JP",sans-serif;
   --navy:#0d3a7d; --navy-deep:#081c3f; --ink:#1a2433; --muted:#5b6b7e;
   --paper:#ffffff; --wash:#eef4fb; --wash2:#f7fafd;
   --accent:#ffc61a; --accent-ink:#3a2e00; --mk:#fff23c;
