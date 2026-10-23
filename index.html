@@ -2,6 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<!-- Google アナリティクス（start-lp と同じ測定ID。アクセス数・ボタンのクリック・お問い合わせの数を数える） -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6PBY44TTB"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-X6PBY44TTB');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>EasyWebCraft｜月額5,980円〜のホームページ制作・運用・保守</title>
@@ -19,7 +27,7 @@
 <meta property="og:image:alt" content="EasyWebCraft｜初期費用0円・月額5,980円〜のサブスク型ホームページ制作">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://service.easywebcraft.jp/ogp.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231c2a44'/><text x='50' y='72' font-size='62' font-weight='bold' text-anchor='middle' font-family='serif' fill='%23c9a14e'>E</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231c2a44'/><text x='50' y='72' font-size='62' font-weight='bold' text-anchor='middle' font-family='serif' fill='%23ffc61a'>E</text></svg>">
 <!-- フォント：見出しは明朝（Shippori Mincho）、本文は Noto Sans JP。
      media="print"→onload で all に切り替えて、フォントの取得を待たずに先に描く -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,12 +76,14 @@ a{color:inherit}
 .arr{font-weight:400}
 
 /* ヘッダー */
-.hd{position:sticky; top:0; z-index:20; background:rgba(255,255,255,.92); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.hd{position:sticky; top:0; z-index:20; background:rgba(28,42,68,.97); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px)}
 .hd-in{display:flex; align-items:center; gap:24px; min-height:60px}
-.logo{font-family:var(--serif); font-weight:800; font-size:22px; letter-spacing:.02em; text-decoration:none; color:var(--navy)}
+.logo{display:block; text-decoration:none}
+.logo img{height:20px; width:auto}
+@media (min-width:960px){.hd .logo img{height:22px}}
 .gnav{margin-left:auto; display:flex; gap:26px; font-size:13.5px}
-.gnav a{text-decoration:none; color:var(--ink)}
-.gnav a:hover{color:var(--gold-d)}
+.gnav a{text-decoration:none; color:#e6e9f0}
+.gnav a:hover{color:#f1d9a6}
 .hd .btn{min-height:38px; padding:0 18px; font-size:13.5px}
 @media (max-width:860px){.gnav{display:none} .hd .btn{margin-left:auto}}
 
@@ -255,9 +265,9 @@ a{color:inherit}
 /* フッター */
 .ft{background:var(--navy); color:#d8dce5; padding-block:36px; font-size:12.5px}
 .ft-in{display:flex; flex-wrap:wrap; align-items:center; gap:20px 40px}
-.ft .logo{color:#fff; font-size:24px}
-.ft .logo small{display:block; font-family:var(--sans); font-weight:400; font-size:10.5px; letter-spacing:.06em; color:#aab2c2}
+.ft .logo img{height:auto; width:220px; max-width:70vw}
 .ft-info p{margin:0; line-height:1.8}
+.ft-sub{margin:8px 0 0; font-size:11.5px; color:#aab2c2}
 .ft-links{display:flex; gap:22px}
 .ft-links a{color:#d8dce5; text-decoration:none}
 .ft-links a:hover{color:#fff}
@@ -336,7 +346,7 @@ a{color:inherit}
 
 <header class="hd">
   <div class="wrap hd-in">
-    <a class="logo" href="#top">EasyWebCraft</a>
+    <a class="logo" href="#top" aria-label="EasyWebCraft トップへ戻る"><img src="img/logo-mark.webp" alt="EasyWebCraft" width="640" height="69"></a>
     <nav class="gnav" aria-label="ページ内リンク">
       <a href="#features">特徴</a><a href="#works">制作事例</a><a href="#plans">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a>
     </nav>
@@ -516,7 +526,7 @@ a{color:inherit}
 
 <footer class="ft">
   <div class="wrap ft-in">
-    <a class="logo" href="#top">EasyWebCraft<small>ホームページ制作・運用・保守サービス</small></a>
+    <div><a class="logo" href="#top"><img src="img/logo-full.webp" alt="EasyWebCraft Web Design &amp; Development" width="800" height="124" loading="lazy"></a><p class="ft-sub">ホームページ制作・運用・保守サービス</p></div>
     <div class="ft-info"><p>運営：株式会社TAC</p><p>愛知県名古屋市守山区瀬古東1-1701 201</p></div>
     <div class="ft-links"><a href="privacy.html">プライバシーポリシー</a><a href="tokushoho.html">特定商取引法に基づく表記</a></div>
     <a class="btn btn-gold" href="#contact">無料で相談する <span class="arr" aria-hidden="true">→</span></a>
@@ -524,7 +534,7 @@ a{color:inherit}
 </footer>
 
 <script>
-// ボタンが押された回数を Google アナリティクスに送る（計測タグを入れたときだけ動く）
+// ボタンが押された回数を Google アナリティクスに送る（どのボタンかは link_text で分かる）
 document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('a');
   if (!a || typeof gtag !== 'function') return;
