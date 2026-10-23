@@ -62,6 +62,7 @@ a{color:inherit}
 .sec-h{text-align:center; margin:0 0 clamp(28px,4vw,44px)}
 .eyebrow{display:block; font-size:12px; letter-spacing:.24em; color:var(--gold); font-weight:500; margin-bottom:6px}
 .sec-h h2{margin:0; font-family:var(--serif); font-weight:700; font-size:clamp(23px,3vw,32px); line-height:1.5; letter-spacing:.04em; text-wrap:balance}
+.sec-h .nb{display:inline-block}
 .sec-h p{margin:8px 0 0; color:var(--sub); font-size:14px}
 
 /* ボタン */
@@ -154,6 +155,21 @@ a{color:inherit}
 .wk .btn:hover{background:var(--cream)}
 .works-note{margin:12px 0 0; text-align:right; font-size:12px; color:var(--mute)}
 @media (max-width:760px){.works{grid-template-columns:1fr} .works-note{text-align:left}}
+
+.works-sub{margin:0 0 14px; display:flex; align-items:center; gap:14px; font-family:var(--serif); font-weight:700; font-size:19px; color:var(--navy)}
+.works-sub::after{content:""; flex:1; height:1px; background:var(--line)}
+/* 制作実績（実際のお客さまのサイト。start-lp と同じ LF グループさま） */
+.real{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:32px; align-items:center; margin:0 0 44px; padding:26px; background:var(--paper); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); text-decoration:none; color:var(--ink); transition:border-color .2s, transform .2s}
+.real:hover{border-color:var(--gold); transform:translateY(-2px)}
+.real-mock{position:relative; display:block; padding-right:16%}
+.real-mock img{display:block; border-radius:6px; box-shadow:0 12px 28px rgba(40,30,15,.18)}
+.real-mock .pc{width:100%; border:1px solid var(--line)}
+.real-mock .sp{position:absolute; right:0; bottom:-6%; width:24%; border:3px solid #1d1f23; border-radius:14px}
+.real-cat{display:inline-block; padding:1px 12px; border:1px solid var(--gold); border-radius:3px; font-size:12px; font-weight:700; color:var(--gold-d)}
+.real h3{margin:10px 0 8px; font-family:var(--serif); font-weight:800; font-size:clamp(20px,2.4vw,26px)}
+.real p{margin:0; font-size:14px; color:var(--sub)}
+.real-link{display:inline-flex; gap:8px; margin-top:14px; font-weight:700; font-size:14px; color:var(--gold-d); border-bottom:1px solid currentColor}
+@media (max-width:760px){.real{grid-template-columns:1fr; gap:22px; padding:18px} .real-mock{margin-bottom:8px}}
 
 /* 料金 */
 .plans{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; align-items:center; max-width:980px; margin:0 auto}
@@ -348,7 +364,7 @@ a{color:inherit}
   <div class="wrap hd-in">
     <a class="logo" href="#top" aria-label="EasyWebCraft トップへ戻る"><img src="img/logo-mark.webp" alt="EasyWebCraft" width="640" height="69"></a>
     <nav class="gnav" aria-label="ページ内リンク">
-      <a href="#features">特徴</a><a href="#works">制作事例</a><a href="#plans">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a>
+      <a href="#features">特徴</a><a href="#works">制作実績</a><a href="#plans">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-gold" href="#contact">無料相談 <span class="arr" aria-hidden="true">→</span></a>
   </div>
@@ -409,7 +425,18 @@ a{color:inherit}
 
 <section class="sec" id="works">
   <div class="wrap">
-    <div class="sec-h"><span class="eyebrow">WORKS</span><h2>月額制でも、デザインに妥協しません。</h2><p>実際に動くサンプルサイトで、制作イメージをご確認いただけます。</p></div>
+    <div class="sec-h"><span class="eyebrow">WORKS</span><h2><span class="nb">月額制でも、</span><span class="nb">デザインに妥協しません。</span></h2><p>実際に制作したホームページと、動くサンプルサイトをご覧いただけます。</p></div>
+    <p class="works-sub">制作実績</p>
+    <a class="real work" href="https://lfgroup.jp/" target="_blank" rel="noopener">
+      <span class="real-mock"><img class="pc" src="img/w-lf-pc.webp" alt="LFグループ株式会社のホームページ（パソコン表示）" width="1280" height="800" loading="lazy"><img class="sp" src="img/w-lf-sp.webp" alt="LFグループ株式会社のホームページ（スマホ表示）" width="780" height="1688" loading="lazy"></span>
+      <span>
+        <span class="real-cat">コーポレートサイト</span>
+        <h3>LFグループ株式会社 様</h3>
+        <p>個人のお客様・法人のお客様それぞれへの案内から、事業紹介・会社概要・採用情報までをまとめたホームページです。</p>
+        <span class="real-link">実際のサイトを見る<span aria-hidden="true">→</span></span>
+      </span>
+    </a>
+    <p class="works-sub">サンプルサイト</p>
     <div class="works">
       <article class="wk"><img src="img/salon.webp" alt="美容室サイト hair salon TASHI の制作イメージ" width="800" height="478" loading="lazy"><div class="wk-b"><span class="wk-tag">美容室</span><h3>hair salon TASHI</h3><p>落ち着いた上質な空間を伝える、シンプルで洗練されたサイトです。</p><a class="btn work" href="https://k-matsumoto527.github.io/salon-sample/salon-sample.html" target="_blank" rel="noopener">サイトを見る <span class="arr" aria-hidden="true">→</span></a></div></article>
       <article class="wk"><img src="img/dining.webp" alt="飲食店サイト Dining TASHIRO の制作イメージ" width="800" height="476" loading="lazy"><div class="wk-b"><span class="wk-tag">飲食店</span><h3>Dining TASHIRO</h3><p>こだわりの料理とお店の雰囲気を、美しく見せるサイトです。</p><a class="btn work" href="https://k-matsumoto527.github.io/my-website/" target="_blank" rel="noopener">サイトを見る <span class="arr" aria-hidden="true">→</span></a></div></article>
